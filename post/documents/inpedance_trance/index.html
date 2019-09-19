@@ -28,10 +28,23 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="タスク空間での剛性を関節空間での剛性に変換することを考える.タスクの自由度を$l$,関節の自由度を$m$として,冗長な関節自由度をもつ時を考える.($m&gt;l$)この時,関節空間の剛性 $K_{\theta}$ は正則でなくなり,関節空間のコンプライアンス$C_{\theta}$が定まらない. タスク空間の剛性$K$は正則であるとして,この時のタスク空間でのコンプライアンス $C$は
+\[C=K^{-1}=J C_\theta J^T \tag{1}\]
+上式を満たす,関節空間でのコンプライアンス$C_\theta$を求める.この方程式に関して以下の性質が成り立つ.
+1) 解の存在性 「姿勢に特異点にない限り,関節空間のコンプライアンス$C_\theta$に関する方程式$(1)$は解をもつ」
+proof) 式$(1)$が解をもつための必要十分条件は
+\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \tag{2}\]
+が成立することを示す.$J^{\sharp}$は擬似逆行列である.
+式$(1)$に解が存在すると、式$(2)$の左辺に$C$に式$(1)$を代入すると,
+\[ JJ^{\sharp}(J C_\theta J^T)(JJ^{\sharp})^T = (JJ^{\sharp}J)C_{\theta}(JJ^{\sharp}J)^T = J C_\theta J^T = C \tag{3}\]
+となり,式$(2)$が成立することがわかる. 式$(2)$が成立すると,式$(1)$と比較すると
+\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \\ J J^{\sharp}C(J^{\sharp})^TJ^T = J C_\theta J^T \\ C_\theta = J^{\sharp}C(J^{\sharp})^T \tag{4}\]
+がひとつの解となる.よって式$(2)$は式$(1)$が解をもつための必要十分条件である. $m&gt;l$で関節の自由度が冗長で姿勢に特異点がない時に, $J$は行に対してフルランクとなり, 擬似逆行列$J^{\sharp}$は
+\[ J^{\sharp} = J^T(JJ^T)^{-1} \tag{5} \]
+2) 一般解 「$(1)$式の方程式の一般解は \( C_\theta = J^{\sharp} C (J^{\sharp})^T &#43; (Z - J^{\sharp}JZ(J^{\sharp}J)^T) \tag{6}\) $Z \in \rm{R}^{m \times m}$は任意の行列である.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/publication/conference-paper/rsj2019/">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/inpedance_trance/">
 
   
 
@@ -96,7 +109,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/publication/conference-paper/rsj2019/">
+  <link rel="canonical" href="/post/documents/inpedance_trance/">
 
   
   
@@ -109,15 +122,28 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/publication/conference-paper/rsj2019/">
-  <meta property="og:title" content="ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証 | atlab">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/inpedance_trance/">
+  <meta property="og:title" content="インピーダンス変換 | atlab">
+  <meta property="og:description" content="タスク空間での剛性を関節空間での剛性に変換することを考える.タスクの自由度を$l$,関節の自由度を$m$として,冗長な関節自由度をもつ時を考える.($m&gt;l$)この時,関節空間の剛性 $K_{\theta}$ は正則でなくなり,関節空間のコンプライアンス$C_{\theta}$が定まらない. タスク空間の剛性$K$は正則であるとして,この時のタスク空間でのコンプライアンス $C$は
+\[C=K^{-1}=J C_\theta J^T \tag{1}\]
+上式を満たす,関節空間でのコンプライアンス$C_\theta$を求める.この方程式に関して以下の性質が成り立つ.
+1) 解の存在性 「姿勢に特異点にない限り,関節空間のコンプライアンス$C_\theta$に関する方程式$(1)$は解をもつ」
+proof) 式$(1)$が解をもつための必要十分条件は
+\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \tag{2}\]
+が成立することを示す.$J^{\sharp}$は擬似逆行列である.
+式$(1)$に解が存在すると、式$(2)$の左辺に$C$に式$(1)$を代入すると,
+\[ JJ^{\sharp}(J C_\theta J^T)(JJ^{\sharp})^T = (JJ^{\sharp}J)C_{\theta}(JJ^{\sharp}J)^T = J C_\theta J^T = C \tag{3}\]
+となり,式$(2)$が成立することがわかる. 式$(2)$が成立すると,式$(1)$と比較すると
+\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \\ J J^{\sharp}C(J^{\sharp})^TJ^T = J C_\theta J^T \\ C_\theta = J^{\sharp}C(J^{\sharp})^T \tag{4}\]
+がひとつの解となる.よって式$(2)$は式$(1)$が解をもつための必要十分条件である. $m&gt;l$で関節の自由度が冗長で姿勢に特異点がない時に, $J$は行に対してフルランクとなり, 擬似逆行列$J^{\sharp}$は
+\[ J^{\sharp} = J^T(JJ^T)^{-1} \tag{5} \]
+2) 一般解 「$(1)$式の方程式の一般解は \( C_\theta = J^{\sharp} C (J^{\sharp})^T &#43; (Z - J^{\sharp}JZ(J^{\sharp}J)^T) \tag{6}\) $Z \in \rm{R}^{m \times m}$は任意の行列である."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-09-06T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2019-09-18T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2019-09-06T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2019-09-18T00:00:00&#43;00:00">
   
 
   
@@ -129,7 +155,7 @@
 
 
 
-  <title>ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証 | atlab</title>
+  <title>インピーダンス変換 | atlab</title>
 
 </head>
 
@@ -262,7 +288,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/publication"><span>Publications</span></a>
+          <a class="nav-link " href="/publication"><span>Publications</span></a>
         </li>
 
         
@@ -296,7 +322,7 @@
 </nav>
 
 
-  <div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
@@ -317,7 +343,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証</h1>
+  <h1 itemprop="name">インピーダンス変換</h1>
 
   
 
@@ -326,23 +352,11 @@
 
 
 
-<meta content="2019-09-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-06 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-18 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
-  
-  
-  
-  
-  <div>
-    
-
-
-
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/ko-yamamoto/">Ko Yamamoto</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/taiki-ishigaki/">Taiki Ishigaki</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/yoshihiko-nakamura/">Yoshihiko Nakamura</a></span>
-
-  </div>
   
   
 
@@ -352,12 +366,17 @@
     
       
     
-    <time>September 2019</time>
+    <time>Sep 18, 2019</time>
   </span>
   
 
   
 
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
   
 
   
@@ -396,51 +415,81 @@
 
   <div class="article-container">
 
-    
+    <div class="article-style" itemprop="articleBody">
+      <p>タスク空間での剛性を関節空間での剛性に変換することを考える.タスクの自由度を$l$,関節の自由度を$m$として,冗長な関節自由度をもつ時を考える.($m&gt;l$)この時,関節空間の剛性 $K_{\theta}$ は正則でなくなり,関節空間のコンプライアンス$C_{\theta}$が定まらない.
+タスク空間の剛性$K$は正則であるとして,この時のタスク空間でのコンプライアンス $C$は</p>
 
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Type</div>
-          <div class="col-12 col-md-9">
-            
-            
-            <a href="/publication/#1">
-              Conference paper
-            </a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
+<p><span  class="math">\[C=K^{-1}=J C_\theta J^T \tag{1}\]</span></p>
+
+<p>上式を満たす,関節空間でのコンプライアンス$C_\theta$を求める.この方程式に関して以下の性質が成り立つ.</p>
+
+<h2 id="1-解の存在性">1) 解の存在性</h2>
+
+<p>「姿勢に特異点にない限り,関節空間のコンプライアンス$C_\theta$に関する方程式$(1)$は解をもつ」</p>
+
+<p>proof)
+式$(1)$が解をもつための必要十分条件は</p>
+
+<p><span  class="math">\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \tag{2}\]</span></p>
+
+<p>が成立することを示す.$J^{\sharp}$は擬似逆行列である.<br>
+式$(1)$に解が存在すると、式$(2)$の左辺に$C$に式$(1)$を代入すると,</p>
+
+<p><span  class="math">\[ JJ^{\sharp}(J C_\theta J^T)(JJ^{\sharp})^T = (JJ^{\sharp}J)C_{\theta}(JJ^{\sharp}J)^T = J C_\theta J^T = C \tag{3}\]</span></p>
+
+<p>となり,式$(2)$が成立することがわかる.
+式$(2)$が成立すると,式$(1)$と比較すると</p>
+
+<p><span  class="math">\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \\
+J J^{\sharp}C(J^{\sharp})^TJ^T = J C_\theta J^T \\
+ C_\theta = J^{\sharp}C(J^{\sharp})^T \tag{4}\]</span></p>
+
+<p>がひとつの解となる.よって式$(2)$は式$(1)$が解をもつための必要十分条件である.
+$m&gt;l$で関節の自由度が冗長で姿勢に特異点がない時に, $J$は行に対してフルランクとなり, 擬似逆行列$J^{\sharp}$は</p>
+
+<p><span  class="math">\[ J^{\sharp} = J^T(JJ^T)^{-1} \tag{5} \]</span></p>
+
+<h2 id="2-一般解">2) 一般解</h2>
+
+<p>「$(1)$式の方程式の一般解は
+<span  class="math">\( C_\theta = J^{\sharp} C (J^{\sharp})^T + (Z - J^{\sharp}JZ(J^{\sharp}J)^T) \tag{6}\)</span>
+$Z \in \rm{R}^{m \times m}$は任意の行列である.」</p>
+
+<p>proof)
+式$(6)$の$C_\theta$を式$(1)$に代入すると,
+<span  class="math">\( JC_\theta J^T = JJ^{\sharp}C(JJ^{\sharp})^T + J(Z - J^{\sharp}J Z (J^{\sharp}J)^T)J^T = C \tag{7}\)</span>
+となるため,式$(6)$の$C_\theta$は式$(1)$の解である.
+また,$X$を任意の解とすると,
+<span  class="math">\( Z = X - J^{\sharp}C(J^{\sharp})^T \tag{8}\)</span>
+として,
+<span  class="math">\( X = J^{\sharp}C(J^T)^{\sharp} + (Z - J^{\sharp}J Z (J^{\sharp}J)^T) \tag{9}\)</span>
+と表すことができる.</p>
+
+<h2 id="3-最小ノルム解">3) 最小ノルム解</h2>
+
+<p>「式$(1)$の方程式の解のうち
+<span  class="math">\( {C_\theta}^* = J^{\sharp} C (J^T)^\sharp\)</span>
+は最小ノルムを有する.ここでのマトリクスノルムは$|C_\theta | = {tr({C_\theta}^T C_\theta)}^{1/2}$を用いる.」
+$tr(A)$は行列$A$の対角和.</p>
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li>T.Tsuji, et al. : 1988 冗長性を有する上肢多自由度運動におけるインピーダンス変換法</li>
+<li>T.Tsuji, et al. : 1990 冗長性を利用したマニピュレータの関節コンプライアンス調節</li>
+</ul>
+
     </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">第37回ロボット学会学術講演会前刷集</div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
-
-    <div class="space-below"></div>
-
-    <div class="article-style"></div>
 
     
 
 
     
+
+
+
+    
+      
 
 
 
@@ -450,27 +499,62 @@
 
 
   
+
+
+
+
+
+  
+  
   
     
-  
-  
-
-
-
-
-
-  
-  
   
   
   <div class="media author-card" itemscope itemtype="http://schema.org/Person">
     
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="/authors/ko-yamamoto/"></a></h5>
-      
-      
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
       <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
         
       </ul>
     </div>
@@ -478,14 +562,17 @@
 
 
 
+      
+      
+    
+
+    
 
     
 
 
   </div>
-</div>
-
-
+</article>
 
       
 
