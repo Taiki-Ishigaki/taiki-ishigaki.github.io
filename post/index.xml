@@ -5,82 +5,12 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
-    
-    <item>
-      <title>インピーダンス変換</title>
-      <link>/post/documents/inpedance_trance/</link>
-      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/post/documents/inpedance_trance/</guid>
-      <description>&lt;p&gt;タスク空間での剛性を関節空間での剛性に変換することを考える.タスクの自由度を$l$,関節の自由度を$m$として,冗長な関節自由度をもつ時を考える.($m&amp;gt;l$)この時,関節空間の剛性 $K_{\theta}$ は正則でなくなり,関節空間のコンプライアンス$C_{\theta}$が定まらない.
-タスク空間の剛性$K$は正則であるとして,この時のタスク空間でのコンプライアンス $C$は&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[C=K^{-1}=J C_\theta J^T \tag{1}\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;上式を満たす,関節空間でのコンプライアンス$C_\theta$を求める.この方程式に関して以下の性質が成り立つ.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-解の存在性&#34;&gt;1) 解の存在性&lt;/h2&gt;
-
-&lt;p&gt;「姿勢に特異点にない限り,関節空間のコンプライアンス$C_\theta$に関する方程式$(1)$は解をもつ」&lt;/p&gt;
-
-&lt;p&gt;proof)
-式$(1)$が解をもつための必要十分条件は&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \tag{2}\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;が成立することを示す.$J^{\sharp}$は擬似逆行列である.&lt;br&gt;
-式$(1)$に解が存在すると、式$(2)$の左辺に$C$に式$(1)$を代入すると,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[ JJ^{\sharp}(J C_\theta J^T)(JJ^{\sharp})^T = (JJ^{\sharp}J)C_{\theta}(JJ^{\sharp}J)^T = J C_\theta J^T = C \tag{3}\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;となり,式$(2)$が成立することがわかる.
-式$(2)$が成立すると,式$(1)$と比較すると&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[ JJ^{\sharp}C(JJ^{\sharp})^T = C \\
-J J^{\sharp}C(J^{\sharp})^TJ^T = J C_\theta J^T \\
- C_\theta = J^{\sharp}C(J^{\sharp})^T \tag{4}\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;がひとつの解となる.よって式$(2)$は式$(1)$が解をもつための必要十分条件である.
-$m&amp;gt;l$で関節の自由度が冗長で姿勢に特異点がない時に, $J$は行に対してフルランクとなり, 擬似逆行列$J^{\sharp}$は&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[ J^{\sharp} = J^T(JJ^T)^{-1} \tag{5} \]&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-一般解&#34;&gt;2) 一般解&lt;/h2&gt;
-
-&lt;p&gt;「$(1)$式の方程式の一般解は
-&lt;span  class=&#34;math&#34;&gt;\( C_\theta = J^{\sharp} C (J^{\sharp})^T + (Z - J^{\sharp}JZ(J^{\sharp}J)^T) \tag{6}\)&lt;/span&gt;
-$Z \in \rm{R}^{m \times m}$は任意の行列である.」&lt;/p&gt;
-
-&lt;p&gt;proof)
-式$(6)$の$C_\theta$を式$(1)$に代入すると,
-&lt;span  class=&#34;math&#34;&gt;\( JC_\theta J^T = JJ^{\sharp}C(JJ^{\sharp})^T + J(Z - J^{\sharp}J Z (J^{\sharp}J)^T)J^T = C \tag{7}\)&lt;/span&gt;
-となるため,式$(6)$の$C_\theta$は式$(1)$の解である.
-また,$X$を任意の解とすると,
-&lt;span  class=&#34;math&#34;&gt;\( Z = X - J^{\sharp}C(J^{\sharp})^T \tag{8}\)&lt;/span&gt;
-として,
-&lt;span  class=&#34;math&#34;&gt;\( X = J^{\sharp}C(J^T)^{\sharp} + (Z - J^{\sharp}J Z (J^{\sharp}J)^T) \tag{9}\)&lt;/span&gt;
-と表すことができる.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-最小ノルム解&#34;&gt;3) 最小ノルム解&lt;/h2&gt;
-
-&lt;p&gt;「式$(1)$の方程式の解のうち
-&lt;span  class=&#34;math&#34;&gt;\( {C_\theta}^* = J^{\sharp} C (J^T)^\sharp\)&lt;/span&gt;
-は最小ノルムを有する.ここでのマトリクスノルムは$|C_\theta | = {tr({C_\theta}^T C_\theta)}^{1/2}$を用いる.」
-$tr(A)$は行列$A$の対角和.&lt;/p&gt;
-
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;T.Tsuji, et al. : 1988 冗長性を有する上肢多自由度運動におけるインピーダンス変換法&lt;/li&gt;
-&lt;li&gt;T.Tsuji, et al. : 1990 冗長性を利用したマニピュレータの関節コンプライアンス調節&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
   </channel>
 </rss>
