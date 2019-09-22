@@ -28,10 +28,17 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="剛体の運動方程式 \[ m_i \ddot{p_{G_i}} = \hat{f_i} &#43; \sum_j f_{i, j} - m_i g \tag{1} \]
+\[ \dot{L_i} = \hat{\tau_i} &#43; \sum_j \tau_{i, j} \tag{2} \]
+ $m_i$ : 剛体の質量
+ $p_{G_i}$ : 剛体の重心位置
+ $L_i$ : 剛体の重心まわりの角運動量
+ $\hat{f_i}$ : 剛体に働く外力 $\hat{\tau_i}$ : 剛体に働く重心まわりのモーメント $f_{i, j}$ : 剛体間に働く力 $\tau_{i, j}$ : 剛体間に働くモーメント  多体系の重心の運動方程式 剛体$l_i$($i = 1, ... n$)からなる多体系の重心に関する運動方程式を導出する.
+まず, 重心$ p_G $を定義する.
+\[ p_G = \frac{1}{m} \sum_i m_i p_{G_i} \tag{3} \]">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/tips/">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/robotics/centroidal_dynamics/">
 
   
 
@@ -91,14 +98,12 @@
   
 
   
-  <link rel="alternate" href="/categories/tips/index.xml" type="application/rss+xml" title="atlab">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/tips/">
+  <link rel="canonical" href="/post/documents/robotics/centroidal_dynamics/">
 
   
   
@@ -111,12 +116,22 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/categories/tips/">
-  <meta property="og:title" content="tips | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/robotics/centroidal_dynamics/">
+  <meta property="og:title" content="重心動力学 | atlab">
+  <meta property="og:description" content="剛体の運動方程式 \[ m_i \ddot{p_{G_i}} = \hat{f_i} &#43; \sum_j f_{i, j} - m_i g \tag{1} \]
+\[ \dot{L_i} = \hat{\tau_i} &#43; \sum_j \tau_{i, j} \tag{2} \]
+ $m_i$ : 剛体の質量
+ $p_{G_i}$ : 剛体の重心位置
+ $L_i$ : 剛体の重心まわりの角運動量
+ $\hat{f_i}$ : 剛体に働く外力 $\hat{\tau_i}$ : 剛体に働く重心まわりのモーメント $f_{i, j}$ : 剛体間に働く力 $\tau_{i, j}$ : 剛体間に働くモーメント  多体系の重心の運動方程式 剛体$l_i$($i = 1, ... n$)からなる多体系の重心に関する運動方程式を導出する.
+まず, 重心$ p_G $を定義する.
+\[ p_G = \frac{1}{m} \sum_i m_i p_{G_i} \tag{3} \]"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-09-22T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-09-22T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-09-22T00:00:00&#43;00:00">
   
 
   
@@ -128,7 +143,7 @@
 
 
 
-  <title>tips | atlab</title>
+  <title>重心動力学 | atlab</title>
 
 </head>
 
@@ -230,7 +245,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -286,87 +301,308 @@
 </nav>
 
 
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">重心動力学</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Sep 22, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/robotics/">robotics</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="剛体の運動方程式">剛体の運動方程式</h2>
+
+<p><span  class="math">\[
+m_i \ddot{p_{G_i}} = \hat{f_i} + \sum_j f_{i, j} - m_i g \tag{1}
+\]</span></p>
+
+<p><span  class="math">\[
+\dot{L_i} = \hat{\tau_i} + \sum_j \tau_{i, j} \tag{2}
+\]</span></p>
+
+<ul>
+<li>$m_i$ : 剛体の質量<br></li>
+<li>$p_{G_i}$ : 剛体の重心位置<br></li>
+<li>$L_i$ : 剛体の重心まわりの角運動量<br></li>
+<li>$\hat{f_i}$ : 剛体に働く外力</li>
+<li>$\hat{\tau_i}$ : 剛体に働く重心まわりのモーメント</li>
+<li>$f_{i, j}$ : 剛体間に働く力</li>
+<li>$\tau_{i, j}$ : 剛体間に働くモーメント</li>
+</ul>
+
+<h2 id="多体系の重心の運動方程式">多体系の重心の運動方程式</h2>
+
+<p>剛体$l_i$($i = 1, ... n$)からなる多体系の重心に関する運動方程式を導出する.</p>
+
+<p>まず, 重心$ p_G $を定義する.</p>
+
+<p><span  class="math">\[
+p_G = \frac{1}{m} \sum_i m_i p_{G_i} \tag{3}
+\]</span></p>
+
+<p>ここで$m$は剛体の全質量である.</p>
+
+<p>重心の運動量は</p>
+
+<p><span  class="math">\[
+H_G = m \dot{p_G} \tag{4}
+\]</span></p>
+
+<p>重心に関する運動方程式は運動量の時間変化から(1),(4)式より以下のように求まる</p>
+
+<p><span  class="math">\[
+\dot{H_G} = m \ddot{p_G} = \sum_i m_i \ddot{p_{G_i}}
+= \sum_i (\hat{f_i} + \sum_j f_{i,j} - m_i g)
+= \sum_i \hat{f_i}  - m g
+\]</span></p>
+
+<p><span  class="math">\[
+m \ddot{p_G} = \sum_i \hat{f_i}  - m g \tag{5}
+\]</span></p>
+
+<h2 id="多体系の重心周りの角運動量に関する運動方程式">多体系の重心周りの角運動量に関する運動方程式</h2>
+
+<p>多体系の重心周りの角運動量に関する運動方程式を導出する.</p>
+
+<p>重心周りの角運動量は</p>
+
+<p><span  class="math">\[
+L_G = \sum_i (L_i + (p_{G_i} - p_G) \times m_i \dot{p_i}) \tag{6}
+\]</span></p>
+
+<p>重心周りの角運動量に関する運動方程式は角運動量の時間変化から(2), (6)式より以下のように求まる</p>
+
+<p><span  class="math">\[
+\dot{L_G} = \sum_i (\dot{L_i} + (\dot{p_{G_i}} - \dot{p_G}) \times m_i \dot{p_i} + (p_{G_i} - p_G) \times m_i \ddot{p_i}) = \sum_i(\hat{\tau_i} + (p_{G_i} - p_G) \times \hat{f_i})
+\]</span></p>
+
+<p><span  class="math">\[
+\dot{L_G} = \sum_i(\hat{\tau_i} + (p_{G_i} - p_G) \times \hat{f_i}) \tag{7}
+\]</span></p>
+
+<h2 id="接触レンチcontact-wrench">接触レンチ(contact wrench)</h2>
+
+<p>並進力成分とモーメント成分を合わせた6次元ベクトル</p>
+
+<p><span  class="math">\[
+\left[
+\begin{array}{rr}
+f_c \\
+\tau_c \\
+\end{array}
+\right] =
+\left[
+\begin{array}{rr}
+\sum_i \hat{f_i} \\
+\sum_i(\hat{\tau_i} + p_{G_i} \times \hat{f_i}\\
+\end{array}
+\right]
+\]</span></p>
+
+<h2 id="重心の運動方程式">重心の運動方程式</h2>
+
+<p><span  class="math">\[
+\begin{cases}
+m \ddot{p_G} = f_c - mg \\
+\dot{L} = \tau_c - p_G \times f_c
+\end{cases}
+\]</span></p>
+
+<h2 id="appendix">Appendix</h2>
+
+<h3 id="作用反作用の法則">作用・反作用の法則</h3>
+
+<p><span  class="math">\[
+f_{i, j} = - f_{j, i}
+\]</span></p>
+
+<p><span  class="math">\[
+\tau_{i, j} + p_i \times f_{i, j} = - (\tau_{j, i} + p_j \times f_{j_i})
+\]</span></p>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
   
 
 
 
 
-
-
-
-
-
-
-
-
-  
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">tips</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/post/tips/hugo/hugo-academic/">Using Hugo-Academic</a></h2>
-    <div class="article-style">
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
       
-      reference  https://sourcethemes.com/academic/docs/  
-      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-  
-  <div>
-    <h2><a href="/post/tips/esp32/esp32_setup/">Setup for ESP32</a></h2>
-    <div class="article-style">
-      
-      Setup Aruduino IDE https://www.arduino.cc/en/Main/Software
-for use ESP32 on ArduinoIDE
- [Arduino-ESP32]:https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md copy of Stable release link paste : ツールバー&gt;ファイル&gt;環境設定&gt;追加のボードマネージャーのURL ボードマネージャー :ツール&gt;ボード&gt;ボードマネージャー then search ESP32 install : esp32 by Espressifl Systems  Download ドライバ https://jp.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-About Board On board LED is GPIO2 https://github.com/espressif/arduino-esp32 https://leico.github.io/TechnicalNote/Arduino/esp32-pinmap
-Use Sample Program ファイル&gt;スケッチ例
-Reference  https://qiita.com/WK_ZAKK/items/d7fbbb8c0c8eebe5682d   
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/tips/esp32/oled/">Using OLED(SSD1306:SPI,128x64) by ESP32</a></h2>
-    <div class="article-style">
-      
-      Pin Assintment about SSD1306:SPI,128x64
- GND
- VCC : 3.3v (or 5v)
- D0 : CLK
- D1 : MOSI
- RES : GPIO
- DC : GPIO
- CS : GPIO
-  Install Library  スケッチ&gt;ライブラリをインクルード&gt;ライブラリを管理... search and install : Adafruit SSD1306 by Adafruit search and install : Adafruit GFX Library  Modify Library To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306
-change form
-#define SSD1306_64_48 // #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16  to
-      
-    </div>
-  </div>
-  
 
-  
 
-</div>
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

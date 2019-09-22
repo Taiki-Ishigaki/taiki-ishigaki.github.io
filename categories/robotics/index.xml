@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>robotics | atlab</title>
+    <link>/categories/robotics/</link>
+      <atom:link href="/categories/robotics/index.xml" rel="self" type="application/rss+xml" />
+    <description>robotics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>robotics</title>
+      <link>/categories/robotics/</link>
+    </image>
+    
+    <item>
+      <title>重心動力学</title>
+      <link>/post/documents/robotics/centroidal_dynamics/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/post/documents/robotics/centroidal_dynamics/</guid>
+      <description>&lt;h2 id=&#34;剛体の運動方程式&#34;&gt;剛体の運動方程式&lt;/h2&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+m_i \ddot{p_{G_i}} = \hat{f_i} + \sum_j f_{i, j} - m_i g \tag{1}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\dot{L_i} = \hat{\tau_i} + \sum_j \tau_{i, j} \tag{2}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$m_i$ : 剛体の質量&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;$p_{G_i}$ : 剛体の重心位置&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;$L_i$ : 剛体の重心まわりの角運動量&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;$\hat{f_i}$ : 剛体に働く外力&lt;/li&gt;
+&lt;li&gt;$\hat{\tau_i}$ : 剛体に働く重心まわりのモーメント&lt;/li&gt;
+&lt;li&gt;$f_{i, j}$ : 剛体間に働く力&lt;/li&gt;
+&lt;li&gt;$\tau_{i, j}$ : 剛体間に働くモーメント&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;多体系の重心の運動方程式&#34;&gt;多体系の重心の運動方程式&lt;/h2&gt;
+
+&lt;p&gt;剛体$l_i$($i = 1, ... n$)からなる多体系の重心に関する運動方程式を導出する.&lt;/p&gt;
+
+&lt;p&gt;まず, 重心$ p_G $を定義する.&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+p_G = \frac{1}{m} \sum_i m_i p_{G_i} \tag{3}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;ここで$m$は剛体の全質量である.&lt;/p&gt;
+
+&lt;p&gt;重心の運動量は&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+H_G = m \dot{p_G} \tag{4}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;重心に関する運動方程式は運動量の時間変化から(1),(4)式より以下のように求まる&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\dot{H_G} = m \ddot{p_G} = \sum_i m_i \ddot{p_{G_i}}
+= \sum_i (\hat{f_i} + \sum_j f_{i,j} - m_i g)
+= \sum_i \hat{f_i}  - m g
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+m \ddot{p_G} = \sum_i \hat{f_i}  - m g \tag{5}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;多体系の重心周りの角運動量に関する運動方程式&#34;&gt;多体系の重心周りの角運動量に関する運動方程式&lt;/h2&gt;
+
+&lt;p&gt;多体系の重心周りの角運動量に関する運動方程式を導出する.&lt;/p&gt;
+
+&lt;p&gt;重心周りの角運動量は&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+L_G = \sum_i (L_i + (p_{G_i} - p_G) \times m_i \dot{p_i}) \tag{6}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;重心周りの角運動量に関する運動方程式は角運動量の時間変化から(2), (6)式より以下のように求まる&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\dot{L_G} = \sum_i (\dot{L_i} + (\dot{p_{G_i}} - \dot{p_G}) \times m_i \dot{p_i} + (p_{G_i} - p_G) \times m_i \ddot{p_i}) = \sum_i(\hat{\tau_i} + (p_{G_i} - p_G) \times \hat{f_i})
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\dot{L_G} = \sum_i(\hat{\tau_i} + (p_{G_i} - p_G) \times \hat{f_i}) \tag{7}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;接触レンチcontact-wrench&#34;&gt;接触レンチ(contact wrench)&lt;/h2&gt;
+
+&lt;p&gt;並進力成分とモーメント成分を合わせた6次元ベクトル&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\left[
+\begin{array}{rr}
+f_c \\
+\tau_c \\
+\end{array}
+\right] =
+\left[
+\begin{array}{rr}
+\sum_i \hat{f_i} \\
+\sum_i(\hat{\tau_i} + p_{G_i} \times \hat{f_i}\\
+\end{array}
+\right]
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;重心の運動方程式&#34;&gt;重心の運動方程式&lt;/h2&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\begin{cases}
+m \ddot{p_G} = f_c - mg \\
+\dot{L} = \tau_c - p_G \times f_c
+\end{cases}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;appendix&#34;&gt;Appendix&lt;/h2&gt;
+
+&lt;h3 id=&#34;作用反作用の法則&#34;&gt;作用・反作用の法則&lt;/h3&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+f_{i, j} = - f_{j, i}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\tau_{i, j} + p_i \times f_{i, j} = - (\tau_{j, i} + p_j \times f_{j_i})
+\]&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

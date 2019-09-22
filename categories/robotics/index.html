@@ -31,7 +31,7 @@
   <meta name="description" content="Master Student of Mecano-Informatics">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/tips/">
+  <link rel="alternate" hreflang="en-us" href="/categories/robotics/">
 
   
 
@@ -91,14 +91,14 @@
   
 
   
-  <link rel="alternate" href="/categories/tips/index.xml" type="application/rss+xml" title="atlab">
+  <link rel="alternate" href="/categories/robotics/index.xml" type="application/rss+xml" title="atlab">
   
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/tips/">
+  <link rel="canonical" href="/categories/robotics/">
 
   
   
@@ -111,8 +111,8 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/categories/tips/">
-  <meta property="og:title" content="tips | atlab">
+  <meta property="og:url" content="/categories/robotics/">
+  <meta property="og:title" content="robotics | atlab">
   <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
@@ -128,7 +128,7 @@
 
 
 
-  <title>tips | atlab</title>
+  <title>robotics | atlab</title>
 
 </head>
 
@@ -307,7 +307,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">tips</h1>
+  <h1 itemprop="name">robotics</h1>
 
   
 
@@ -322,43 +322,17 @@
   
   
   <div>
-    <h2><a href="/post/tips/hugo/hugo-academic/">Using Hugo-Academic</a></h2>
+    <h2><a href="/post/documents/robotics/centroidal_dynamics/">重心動力学</a></h2>
     <div class="article-style">
       
-      reference  https://sourcethemes.com/academic/docs/  
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/tips/esp32/esp32_setup/">Setup for ESP32</a></h2>
-    <div class="article-style">
-      
-      Setup Aruduino IDE https://www.arduino.cc/en/Main/Software
-for use ESP32 on ArduinoIDE
- [Arduino-ESP32]:https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md copy of Stable release link paste : ツールバー&gt;ファイル&gt;環境設定&gt;追加のボードマネージャーのURL ボードマネージャー :ツール&gt;ボード&gt;ボードマネージャー then search ESP32 install : esp32 by Espressifl Systems  Download ドライバ https://jp.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-About Board On board LED is GPIO2 https://github.com/espressif/arduino-esp32 https://leico.github.io/TechnicalNote/Arduino/esp32-pinmap
-Use Sample Program ファイル&gt;スケッチ例
-Reference  https://qiita.com/WK_ZAKK/items/d7fbbb8c0c8eebe5682d   
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/tips/esp32/oled/">Using OLED(SSD1306:SPI,128x64) by ESP32</a></h2>
-    <div class="article-style">
-      
-      Pin Assintment about SSD1306:SPI,128x64
- GND
- VCC : 3.3v (or 5v)
- D0 : CLK
- D1 : MOSI
- RES : GPIO
- DC : GPIO
- CS : GPIO
-  Install Library  スケッチ&gt;ライブラリをインクルード&gt;ライブラリを管理... search and install : Adafruit SSD1306 by Adafruit search and install : Adafruit GFX Library  Modify Library To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306
-change form
-#define SSD1306_64_48 // #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16  to
+      剛体の運動方程式 \[ m_i \ddot{p_{G_i}} = \hat{f_i} + \sum_j f_{i, j} - m_i g \tag{1} \]
+\[ \dot{L_i} = \hat{\tau_i} + \sum_j \tau_{i, j} \tag{2} \]
+ $m_i$ : 剛体の質量
+ $p_{G_i}$ : 剛体の重心位置
+ $L_i$ : 剛体の重心まわりの角運動量
+ $\hat{f_i}$ : 剛体に働く外力 $\hat{\tau_i}$ : 剛体に働く重心まわりのモーメント $f_{i, j}$ : 剛体間に働く力 $\tau_{i, j}$ : 剛体間に働くモーメント  多体系の重心の運動方程式 剛体$l_i$($i = 1, ... n$)からなる多体系の重心に関する運動方程式を導出する.
+まず, 重心$ p_G $を定義する.
+\[ p_G = \frac{1}{m} \sum_i m_i p_{G_i} \tag{3} \]
       
     </div>
   </div>
