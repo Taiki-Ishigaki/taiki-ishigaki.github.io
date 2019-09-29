@@ -31,7 +31,7 @@
   <meta name="description" content="Master Student of Mecano-Informatics">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/categories/humanoid/">
 
   
 
@@ -91,12 +91,14 @@
   
 
   
+  <link rel="alternate" href="/categories/humanoid/index.xml" type="application/rss+xml" title="atlab">
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/categories/humanoid/">
 
   
   
@@ -109,12 +111,12 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | atlab">
+  <meta property="og:url" content="/categories/humanoid/">
+  <meta property="og:title" content="humanoid | atlab">
   <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2019-09-29T00:00:00&#43;00:00">
   
 
   
@@ -126,7 +128,7 @@
 
 
 
-  <title>404 Page not found | atlab</title>
+  <title>humanoid | atlab</title>
 
 </head>
 
@@ -284,40 +286,58 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
   
 
+
+
+
+
+
+
+
+
+
+
+
   
 
-  <p>Perhaps you were looking for one of these?</p>
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
+  <h1 itemprop="name">humanoid</h1>
+
+  
+
+  
+</div>
+
+
+
+<div class="universal-wrapper">
+  
 
   
   
+  <div>
+    <h2><a href="/post/documents/humanoid/lipm/">線形倒立振子</a></h2>
+    <div class="article-style">
+      
+      倒立振子の運動 地面にfree jointとして接続された長さ$h$の棒に質点(重さ:$m$)倒立振子を考える(簡単のため同一平面上を動く時を考える). 振子の傾きを$\theta$として，倒立振子の運動方程式は，
+\[ (m h^2)\ddot{\theta} = mg \sin\theta \ h \]
+$ 0 \simeq \theta $のとき，$\sin\theta \simeq \theta$とすることができるので
+\[ \ddot{\theta} = \omega^2 \sin\theta \quad \omega := \sqrt{\frac{g}{h}}\tag{1} \]
+重心位置$x_G$として，$x_G = h \sin\theta \simeq h\theta$なので(1)式は
+\[ \ddot{x_G} = \omega x_G \tag{2} \]
+状態変数$x = [x_G \dot{x_G}]^T$として状態方程式は
+\[ \dot{x} = \left[ \begin{array}{rr} \dot{x_G} \\ \ddot{x_G} \\ \end{array} \right] = \left[ \begin{array}{rr} 0 & 1 \\ \omega^2 & 0 \\ \end{array} \right] \left[ \begin{array}{rr} x_G \\ \dot{x_G} \\ \end{array} \right] = Ax \tag{3} \]
+      
+    </div>
+  </div>
   
-  <h2>Latest</h2>
-  <ul>
-    
-      <li><a href="/post/documents/humanoid/lipm/">線形倒立振子</a></li>
-    
-      <li><a href="/post/tips/hugo/hugo-academic/">Using Hugo-Academic</a></li>
-    
-      <li><a href="/post/documents/robotics/centroidal_dynamics/">重心動力学</a></li>
-    
-      <li><a href="/post/tips/esp32/esp32_setup/">Setup for ESP32</a></li>
-    
-      <li><a href="/post/tips/esp32/oled/">Using OLED(SSD1306:SPI,128x64) by ESP32</a></li>
-    
-      <li><a href="/publication/conference-paper/rsj2019/">ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証</a></li>
-    
-  </ul>
+
   
 
 </div>

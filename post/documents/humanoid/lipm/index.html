@@ -28,10 +28,17 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="倒立振子の運動 地面にfree jointとして接続された長さ$h$の棒に質点(重さ:$m$)倒立振子を考える(簡単のため同一平面上を動く時を考える). 振子の傾きを$\theta$として，倒立振子の運動方程式は，
+\[ (m h^2)\ddot{\theta} = mg \sin\theta \ h \]
+$ 0 \simeq \theta $のとき，$\sin\theta \simeq \theta$とすることができるので
+\[ \ddot{\theta} = \omega^2 \sin\theta \quad \omega := \sqrt{\frac{g}{h}}\tag{1} \]
+重心位置$x_G$として，$x_G = h \sin\theta \simeq h\theta$なので(1)式は
+\[ \ddot{x_G} = \omega x_G \tag{2} \]
+状態変数$x = [x_G \dot{x_G}]^T$として状態方程式は
+\[ \dot{x} = \left[ \begin{array}{rr} \dot{x_G} \\ \ddot{x_G} \\ \end{array} \right] = \left[ \begin{array}{rr} 0 & 1 \\ \omega^2 & 0 \\ \end{array} \right] \left[ \begin{array}{rr} x_G \\ \dot{x_G} \\ \end{array} \right] = Ax \tag{3} \]">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/humanoid/lipm/">
 
   
 
@@ -96,7 +103,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/documents/humanoid/lipm/">
 
   
   
@@ -109,12 +116,22 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/humanoid/lipm/">
+  <meta property="og:title" content="線形倒立振子 | atlab">
+  <meta property="og:description" content="倒立振子の運動 地面にfree jointとして接続された長さ$h$の棒に質点(重さ:$m$)倒立振子を考える(簡単のため同一平面上を動く時を考える). 振子の傾きを$\theta$として，倒立振子の運動方程式は，
+\[ (m h^2)\ddot{\theta} = mg \sin\theta \ h \]
+$ 0 \simeq \theta $のとき，$\sin\theta \simeq \theta$とすることができるので
+\[ \ddot{\theta} = \omega^2 \sin\theta \quad \omega := \sqrt{\frac{g}{h}}\tag{1} \]
+重心位置$x_G$として，$x_G = h \sin\theta \simeq h\theta$なので(1)式は
+\[ \ddot{x_G} = \omega x_G \tag{2} \]
+状態変数$x = [x_G \dot{x_G}]^T$として状態方程式は
+\[ \dot{x} = \left[ \begin{array}{rr} \dot{x_G} \\ \ddot{x_G} \\ \end{array} \right] = \left[ \begin{array}{rr} 0 & 1 \\ \omega^2 & 0 \\ \end{array} \right] \left[ \begin{array}{rr} x_G \\ \dot{x_G} \\ \end{array} \right] = Ax \tag{3} \]"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2019-09-29T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-09-29T00:00:00&#43;00:00">
   
 
   
@@ -126,7 +143,7 @@
 
 
 
-  <title>404 Page not found | atlab</title>
+  <title>線形倒立振子 | atlab</title>
 
 </head>
 
@@ -228,7 +245,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -284,43 +301,261 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">線形倒立振子</h1>
+
+  
+
+  
     
-      <li><a href="/post/documents/humanoid/lipm/">線形倒立振子</a></li>
+
+
+
+<meta content="2019-09-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-29 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/post/tips/hugo/hugo-academic/">Using Hugo-Academic</a></li>
     
-      <li><a href="/post/documents/robotics/centroidal_dynamics/">重心動力学</a></li>
+      
     
-      <li><a href="/post/tips/esp32/esp32_setup/">Setup for ESP32</a></li>
+    <time>Sep 29, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/humanoid/">humanoid</a></span>
+  
+
+  
     
-      <li><a href="/post/tips/esp32/oled/">Using OLED(SSD1306:SPI,128x64) by ESP32</a></li>
-    
-      <li><a href="/publication/conference-paper/rsj2019/">ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証</a></li>
-    
-  </ul>
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="倒立振子の運動">倒立振子の運動</h2>
+
+<p>地面にfree jointとして接続された長さ$h$の棒に質点(重さ:$m$)倒立振子を考える(簡単のため同一平面上を動く時を考える). 振子の傾きを$\theta$として，倒立振子の運動方程式は，</p>
+
+<p><span  class="math">\[
+(m h^2)\ddot{\theta} = mg \sin\theta \ h
+\]</span></p>
+
+<p>$ 0 \simeq \theta $のとき，$\sin\theta \simeq \theta$とすることができるので</p>
+
+<p><span  class="math">\[
+\ddot{\theta} = \omega^2 \sin\theta \quad  \omega := \sqrt{\frac{g}{h}}\tag{1}
+\]</span></p>
+
+<p>重心位置$x_G$として，$x_G = h \sin\theta \simeq h\theta$なので(1)式は</p>
+
+<p><span  class="math">\[
+\ddot{x_G} = \omega x_G \tag{2}
+\]</span></p>
+
+<p>状態変数$x = [x_G \dot{x_G}]^T$として状態方程式は</p>
+
+<p><span  class="math">\[
+\dot{x} =
+\left[
+\begin{array}{rr}
+\dot{x_G} \\
+\ddot{x_G} \\
+\end{array}
+\right] =
+\left[
+\begin{array}{rr}
+0 & 1 \\
+\omega^2 & 0 \\
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+x_G \\
+\dot{x_G} \\
+\end{array}
+\right] =
+Ax \tag{3}
+\]</span></p>
+
+<p>状態遷移行列$A$の固有値，固有ベクトルを求めシステムの性質を調べる</p>
+
+<p><span  class="math">\[
+det(\lambda E - A ) = 0 \\
+\left|
+\begin{array}{rr}
+\lambda & -1 \\
+-\omega^2 & \lambda \\
+\end{array}
+\right|
+= \lambda^2 - \omega^2 = (\lambda - \omega) (\lambda + \omega) = 0 \\
+\lambda = \omega, -\omega
+\]</span></p>
+
+<p>固有値は$\lambda = \omega, -\omega$で固有ベクトルは<br>
+$\lambda = -\omega &lt; 0$ のとき $a_1 = [1, -\omega]^T$<br>
+$\lambda = \omega &gt; 0$ のとき $a_2 = [1, \omega]^T$</p>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

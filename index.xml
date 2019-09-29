@@ -5,12 +5,82 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>atlab</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 29 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>atlab</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>線形倒立振子</title>
+      <link>/post/documents/humanoid/lipm/</link>
+      <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/post/documents/humanoid/lipm/</guid>
+      <description>&lt;h2 id=&#34;倒立振子の運動&#34;&gt;倒立振子の運動&lt;/h2&gt;
+
+&lt;p&gt;地面にfree jointとして接続された長さ$h$の棒に質点(重さ:$m$)倒立振子を考える(簡単のため同一平面上を動く時を考える). 振子の傾きを$\theta$として，倒立振子の運動方程式は，&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+(m h^2)\ddot{\theta} = mg \sin\theta \ h
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;$ 0 \simeq \theta $のとき，$\sin\theta \simeq \theta$とすることができるので&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\ddot{\theta} = \omega^2 \sin\theta \quad  \omega := \sqrt{\frac{g}{h}}\tag{1}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;重心位置$x_G$として，$x_G = h \sin\theta \simeq h\theta$なので(1)式は&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\ddot{x_G} = \omega x_G \tag{2}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;状態変数$x = [x_G \dot{x_G}]^T$として状態方程式は&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\dot{x} =
+\left[
+\begin{array}{rr}
+\dot{x_G} \\
+\ddot{x_G} \\
+\end{array}
+\right] =
+\left[
+\begin{array}{rr}
+0 &amp; 1 \\
+\omega^2 &amp; 0 \\
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+x_G \\
+\dot{x_G} \\
+\end{array}
+\right] =
+Ax \tag{3}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;状態遷移行列$A$の固有値，固有ベクトルを求めシステムの性質を調べる&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+det(\lambda E - A ) = 0 \\
+\left|
+\begin{array}{rr}
+\lambda &amp; -1 \\
+-\omega^2 &amp; \lambda \\
+\end{array}
+\right|
+= \lambda^2 - \omega^2 = (\lambda - \omega) (\lambda + \omega) = 0 \\
+\lambda = \omega, -\omega
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;固有値は$\lambda = \omega, -\omega$で固有ベクトルは&lt;br&gt;
+$\lambda = -\omega &amp;lt; 0$ のとき $a_1 = [1, -\omega]^T$&lt;br&gt;
+$\lambda = \omega &amp;gt; 0$ のとき $a_2 = [1, \omega]^T$&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Using Hugo-Academic</title>
