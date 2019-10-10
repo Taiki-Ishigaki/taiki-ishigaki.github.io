@@ -116,7 +116,7 @@
   <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-09-22T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2019-10-09T00:00:00&#43;00:00">
   
 
   
@@ -320,6 +320,28 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/documents/robotics/task_priority/">優先度付き微分逆運動学</a></h2>
+    <div class="article-style">
+      
+      準備 順運動学と微分順運動学 $x \in \mathbb{R}^{m}$ と リンク系の状態を示す一般化座標$q \in \mathbb{R}^{n}$
+順運動学
+\[ x = f(q) \tag{1} \]
+微分順運動学
+\[ \dot{x} = J(q) \dot{q} \tag{2} \]
+ここで$J(q) = \frac{\partial f}{\partial q} \in \mathbb{R}^{m \times n}$
+微分逆運動学 $m &lt; n$で冗長な時，式(1)の一般解，微分逆運動学の式は
+\[ \dot{q} = J^{\sharp} \dot{x} + N y \tag{3} \]
+ここで$J^{\sharp}$は$J$の擬似逆行列で$N$は任意のベクトルを$J(\theta)$のヌルスペースに写像する行列で$y$は任意のベクトル．
+優先度付き微分逆運動学 制御を行なう上で実現させたい量(手先の位置や速度，角運動量など)をタスクと呼ぶ．この時，そのタスクは式(1)のように一般化座標で表すことができるためタスクを実現するために一般化座標について解きロボットを制御する．
+ここでそのタスクが優先度を持って与えられたとする．タスク$x_i (i = 1, ... n)$，ここでタスクのインデックスが小さいほど優先順位が高いとする．
+高い優先度のタスクを式(3)の微分逆運動学で実現し，$J_i$のヌルスペースでより低い優先度のタスクを実現する．[1]
+\[ \dot{x_i} = J_i \dot{q} \]
+\[ \dot{q} = {J_i}^{\sharp} \dot{x_i} + N_i y \tag{4} \]
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/documents/robotics/centroidal_dynamics/">重心動力学</a></h2>

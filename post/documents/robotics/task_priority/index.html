@@ -28,10 +28,23 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="準備 順運動学と微分順運動学 $x \in \mathbb{R}^{m}$ と リンク系の状態を示す一般化座標$q \in \mathbb{R}^{n}$
+順運動学
+\[ x = f(q) \tag{1} \]
+微分順運動学
+\[ \dot{x} = J(q) \dot{q} \tag{2} \]
+ここで$J(q) = \frac{\partial f}{\partial q} \in \mathbb{R}^{m \times n}$
+微分逆運動学 $m &lt; n$で冗長な時，式(1)の一般解，微分逆運動学の式は
+\[ \dot{q} = J^{\sharp} \dot{x} &#43; N y \tag{3} \]
+ここで$J^{\sharp}$は$J$の擬似逆行列で$N$は任意のベクトルを$J(\theta)$のヌルスペースに写像する行列で$y$は任意のベクトル．
+優先度付き微分逆運動学 制御を行なう上で実現させたい量(手先の位置や速度，角運動量など)をタスクと呼ぶ．この時，そのタスクは式(1)のように一般化座標で表すことができるためタスクを実現するために一般化座標について解きロボットを制御する．
+ここでそのタスクが優先度を持って与えられたとする．タスク$x_i (i = 1, ... n)$，ここでタスクのインデックスが小さいほど優先順位が高いとする．
+高い優先度のタスクを式(3)の微分逆運動学で実現し，$J_i$のヌルスペースでより低い優先度のタスクを実現する．[1]
+\[ \dot{x_i} = J_i \dot{q} \]
+\[ \dot{q} = {J_i}^{\sharp} \dot{x_i} &#43; N_i y \tag{4} \]">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/robotics/task_priority/">
 
   
 
@@ -91,14 +104,12 @@
   
 
   
-  <link rel="alternate" href="/categories/index.xml" type="application/rss+xml" title="atlab">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/">
+  <link rel="canonical" href="/post/documents/robotics/task_priority/">
 
   
   
@@ -111,12 +122,28 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/categories/">
-  <meta property="og:title" content="Categories | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/robotics/task_priority/">
+  <meta property="og:title" content="優先度付き微分逆運動学 | atlab">
+  <meta property="og:description" content="準備 順運動学と微分順運動学 $x \in \mathbb{R}^{m}$ と リンク系の状態を示す一般化座標$q \in \mathbb{R}^{n}$
+順運動学
+\[ x = f(q) \tag{1} \]
+微分順運動学
+\[ \dot{x} = J(q) \dot{q} \tag{2} \]
+ここで$J(q) = \frac{\partial f}{\partial q} \in \mathbb{R}^{m \times n}$
+微分逆運動学 $m &lt; n$で冗長な時，式(1)の一般解，微分逆運動学の式は
+\[ \dot{q} = J^{\sharp} \dot{x} &#43; N y \tag{3} \]
+ここで$J^{\sharp}$は$J$の擬似逆行列で$N$は任意のベクトルを$J(\theta)$のヌルスペースに写像する行列で$y$は任意のベクトル．
+優先度付き微分逆運動学 制御を行なう上で実現させたい量(手先の位置や速度，角運動量など)をタスクと呼ぶ．この時，そのタスクは式(1)のように一般化座標で表すことができるためタスクを実現するために一般化座標について解きロボットを制御する．
+ここでそのタスクが優先度を持って与えられたとする．タスク$x_i (i = 1, ... n)$，ここでタスクのインデックスが小さいほど優先順位が高いとする．
+高い優先度のタスクを式(3)の微分逆運動学で実現し，$J_i$のヌルスペースでより低い優先度のタスクを実現する．[1]
+\[ \dot{x_i} = J_i \dot{q} \]
+\[ \dot{q} = {J_i}^{\sharp} \dot{x_i} &#43; N_i y \tag{4} \]"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-10-09T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-10-09T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-10-09T00:00:00&#43;00:00">
   
 
   
@@ -128,7 +155,7 @@
 
 
 
-  <title>Categories | atlab</title>
+  <title>優先度付き微分逆運動学 | atlab</title>
 
 </head>
 
@@ -230,7 +257,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -286,80 +313,277 @@
 </nav>
 
 
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">優先度付き微分逆運動学</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-10-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-10-09 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Oct 9, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/robotics/">robotics</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="準備">準備</h2>
+
+<h3 id="順運動学と微分順運動学">順運動学と微分順運動学</h3>
+
+<p>$x \in \mathbb{R}^{m}$ と リンク系の状態を示す一般化座標$q \in \mathbb{R}^{n}$</p>
+
+<p>順運動学</p>
+
+<p><span  class="math">\[
+x = f(q) \tag{1}
+\]</span></p>
+
+<p>微分順運動学</p>
+
+<p><span  class="math">\[
+\dot{x} = J(q) \dot{q} \tag{2}
+\]</span></p>
+
+<p>ここで$J(q) = \frac{\partial f}{\partial q} \in \mathbb{R}^{m \times n}$</p>
+
+<h2 id="微分逆運動学">微分逆運動学</h2>
+
+<p>$m &lt; n$で冗長な時，式(1)の一般解，微分逆運動学の式は</p>
+
+<p><span  class="math">\[
+\dot{q} = J^{\sharp} \dot{x} + N y \tag{3}
+\]</span></p>
+
+<p>ここで$J^{\sharp}$は$J$の擬似逆行列で$N$は任意のベクトルを$J(\theta)$のヌルスペースに写像する行列で$y$は任意のベクトル．</p>
+
+<h2 id="優先度付き微分逆運動学">優先度付き微分逆運動学</h2>
+
+<p>制御を行なう上で実現させたい量(手先の位置や速度，角運動量など)をタスクと呼ぶ．この時，そのタスクは式(1)のように一般化座標で表すことができるためタスクを実現するために一般化座標について解きロボットを制御する．</p>
+
+<p>ここでそのタスクが優先度を持って与えられたとする．タスク$x_i (i = 1, ... n)$，ここでタスクのインデックスが小さいほど優先順位が高いとする．</p>
+
+<p>高い優先度のタスクを式(3)の微分逆運動学で実現し，$J_i$のヌルスペースでより低い優先度のタスクを実現する．[1]</p>
+
+<p><span  class="math">\[
+\dot{x_i} = J_i \dot{q}
+\]</span></p>
+
+<p><span  class="math">\[
+\dot{q} = {J_i}^{\sharp} \dot{x_i} + N_i y \tag{4}
+\]</span></p>
+
+<p><span  class="math">\[
+\dot{x_{i+1}} = J_{i+1} \dot{q} \tag{5}
+\]</span></p>
+
+<p>式(4)，(5)を同時に満たす，$y$を求める．(5)式に(4)式を代入すると</p>
+
+<p><span  class="math">\[
+\dot{x_{i+1}} = J_{i+1} {J_i}^{\sharp} \dot{x_i} + J_{i+1} N_i y
+\]</span></p>
+
+<p><span  class="math">\[
+y =  (J_{i+1} N_i )^{\sharp} (\dot{x_{i+1}} - J_{i+1} {J_i}^{\sharp} \dot{x_i}) + N_{i+1} z
+\]</span></p>
+
+<p>ここで優先度順で解いた時に，漸化式によって分解でき以下のような一般解となる．[2]</p>
+
+<p><span  class="math">\[
+\rm{for} \  i = i \  \rm{to} \  N
+\]</span></p>
+
+<p><span  class="math">\[
+\dot{q_i} = \dot{q_{i-1}} + (J_i N_{i-1})^{\sharp} (\dot{x_i} - J_i \dot{q_{i-1}})
+\]</span></p>
+
+<p><span  class="math">\[
+N_i = N_{i-1} - (J_i N_{i_1})^{\sharp}(J_i N_{i_1})
+\]</span></p>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1]: Y.Nakamura, et al. (1987) &quot;Task-Priority Based Redundancy Control of Robot Manipulators&quot;<br>
+[2]: B.Siciliano, J-J E. Slotine (1991) &quot;A General Framework for Managing Multiple Tasks in Highly Redundant Robotic Systems&quot;</p>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
   
 
 
 
 
-
-
-
-
-
-
-
-
-  
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Categories</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/categories/robotics/">robotics</a></h2>
-    <div class="article-style">
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
       
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-  
-  <div>
-    <h2><a href="/categories/humanoid/">humanoid</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/tips/">tips</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/esp32/">ESP32</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/electronic-kits/">Electronic Kits</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
 
-  
 
-</div>
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 
