@@ -28,10 +28,15 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="実数行列:$A \in \mathbb{R}^{m \times n}$の特異値分解が以下のように与えられる．
+\[ A = USV^T = \left[ \begin{array}{rr} U_1 & U_2 \end{array} \right] \left[ \begin{array}{rr} \Sigma_{r \times r} & O_{r \times (n-r)} \\ O_{(m-r) \times r} & O_{(m-r) \times (n-r)} \end{array} \right] \left[ \begin{array}{rr} {V_1}^T \\ {V_2}^T \end{array} \right] \]
+\[ \Sigma = \rm{diag}(\sigma_1, ... \sigma_r) \]
+ここでrank$(A) = r$、$U \in \mathbb{R}^{m \times m}$，$V \in \mathbb{R}^{n \times n}$は直交行列，$\sigma_i (i = 1, ... r)$は$A$の特異値
+擬似逆行列は
+\[ A^{\sharp} = \left[ \begin{array}{rr} U_1 & U_2 \end{array} \right] \left[ \begin{array}{rr} \Sigma_{r \times r}^{-1} & O_{r \times (n-r)} \\ O_{(m-r) \times r} & O_{(m-r) \times (n-r)} \end{array} \right] \left[ \begin{array}{rr} {V_1}^T \\ {V_2}^T \end{array} \right] \]">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/math/singular_value_decomposition/">
 
   
 
@@ -91,14 +96,12 @@
   
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="atlab">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/post/documents/math/singular_value_decomposition/">
 
   
   
@@ -111,12 +114,20 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/math/singular_value_decomposition/">
+  <meta property="og:title" content="特異値分解 | atlab">
+  <meta property="og:description" content="実数行列:$A \in \mathbb{R}^{m \times n}$の特異値分解が以下のように与えられる．
+\[ A = USV^T = \left[ \begin{array}{rr} U_1 & U_2 \end{array} \right] \left[ \begin{array}{rr} \Sigma_{r \times r} & O_{r \times (n-r)} \\ O_{(m-r) \times r} & O_{(m-r) \times (n-r)} \end{array} \right] \left[ \begin{array}{rr} {V_1}^T \\ {V_2}^T \end{array} \right] \]
+\[ \Sigma = \rm{diag}(\sigma_1, ... \sigma_r) \]
+ここでrank$(A) = r$、$U \in \mathbb{R}^{m \times m}$，$V \in \mathbb{R}^{n \times n}$は直交行列，$\sigma_i (i = 1, ... r)$は$A$の特異値
+擬似逆行列は
+\[ A^{\sharp} = \left[ \begin{array}{rr} U_1 & U_2 \end{array} \right] \left[ \begin{array}{rr} \Sigma_{r \times r}^{-1} & O_{r \times (n-r)} \\ O_{(m-r) \times r} & O_{(m-r) \times (n-r)} \end{array} \right] \left[ \begin{array}{rr} {V_1}^T \\ {V_2}^T \end{array} \right] \]"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-10-17T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-10-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-10-17T00:00:00&#43;00:00">
   
 
   
@@ -128,7 +139,7 @@
 
 
 
-  <title>Posts | atlab</title>
+  <title>特異値分解 | atlab</title>
 
 </head>
 
@@ -286,83 +297,33 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">特異値分解</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Posts</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-
-  
-
-  
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/documents/math/singular_value_decomposition/"  itemprop="url">特異値分解</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      実数行列:$A \in \mathbb{R}^{m \times n}$の特異値分解が以下のように与えられる．
-\[ A = USV^T = \left[ \begin{array}{rr} U_1 & U_2 \end{array} \right] \left[ …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 
@@ -405,624 +366,235 @@
   
 
   
+    
+
+  
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </div>
 
-    
-  
-    
-      
 
 
+  <div class="article-container">
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/documents/robotics/task_priority/"  itemprop="url">優先度付き微分逆運動学</a>
-    </h3>
-
-    
     <div class="article-style" itemprop="articleBody">
-      準備 順運動学と微分順運動学 $x \in \mathbb{R}^{m}$ と リンク系の状態を示す一般化座標$q \in \mathbb{R}^{n}$
-順運動学
-\[ x = f(q) \tag{1} \]
-微分順運動学
-\[ \dot{x} = J(q) …
+      <p>実数行列:$A \in \mathbb{R}^{m \times n}$の特異値分解が以下のように与えられる．</p>
+
+<p><span  class="math">\[
+A = USV^T =  
+\left[
+\begin{array}{rr}
+U_1 & U_2
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+\Sigma_{r \times r} & O_{r \times (n-r)} \\
+O_{(m-r) \times r} & O_{(m-r) \times (n-r)}
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+{V_1}^T \\
+{V_2}^T
+\end{array}
+\right]
+\]</span></p>
+
+<p><span  class="math">\[
+\Sigma = \rm{diag}(\sigma_1, ... \sigma_r)
+\]</span></p>
+
+<p>ここでrank$(A) = r$、$U \in \mathbb{R}^{m \times m}$，$V \in \mathbb{R}^{n \times n}$は直交行列，$\sigma_i (i = 1, ... r)$は$A$の特異値</p>
+
+<p>擬似逆行列は</p>
+
+<p><span  class="math">\[
+A^{\sharp} =  
+\left[
+\begin{array}{rr}
+U_1 & U_2
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+\Sigma_{r \times r}^{-1} & O_{r \times (n-r)} \\
+O_{(m-r) \times r} & O_{(m-r) \times (n-r)}
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+{V_1}^T \\
+{V_2}^T
+\end{array}
+\right]
+\]</span></p>
+
+<p>$U$，$V$は直交行列なので</p>
+
+<p><span  class="math">\[
+U^T U = U U^T = E_m , V^T V = V V^T = E_n
+\]</span></p>
+
+<p>そこで</p>
+
+<p><span  class="math">\[
+V^T V =
+\left[
+\begin{array}{rr}
+V_1^T \\
+V_2^T
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+V_1 & V_2
+\end{array}
+\right] =  
+\left[
+\begin{array}{rr}
+V_1^T V_1 & V_1^T V_2 \\
+V_2^T V_1 & V_2^T V_2
+\end{array}
+\right] =  
+E_n
+\]</span></p>
+
+<p><span  class="math">\[
+V V^T =
+\left[
+\begin{array}{rr}
+V_1 & V_2
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+V_1^T \\
+V_2^T
+\end{array}
+\right] =  
+V_1 V_1^T + V_2 V_2^T = E_n
+\]</span></p>
+
+<p>であるので</p>
+
+<p><span  class="math">\[
+V_1^T V_1 = E_r, V_2^T V_2 = E_{(n - r)}, V_1^T V_2 = V_2^T V_1 = O
+\]</span></p>
+
+<p>ここで$V_1$，$V_2$は必ずしも正方行列ではなく$V_1 V_1^T$，$V_2 V_2^T$が単位行列ではない($A$が列フルランクなら$V = V_1$で正方行列)</p>
+
     </div>
+
     
 
-    <div class="stream-meta article-metadata">
 
+    
+
+
+
+    
       
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
       
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
         
-
-
-
-<meta content="2019-10-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-10-09 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Oct 9, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/robotics/">robotics</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/documents/humanoid/lipm/"  itemprop="url">線形倒立振子</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      倒立振子の運動 地面にfree jointとして接続された長さ$h$の棒に質点(重さ:$m$)倒立振子を考える(簡単のため同一平面上を動く時を考える). 振子の傾きを$\theta$として，倒立振子の運動方程式は，
-\[ (m h^2)\ddot{\theta} = …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2019-09-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-29 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Sep 29, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/humanoid/">humanoid</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/tips/hugo/hugo-academic/"  itemprop="url">Using Hugo-Academic</a>
-    </h3>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Sep 22, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/tips/">tips</a></span>
-  
-
-  
-
-</div>
-
-      
+      </ul>
     </div>
+  </div>
+
+
+
+      
+      
+    
 
     
+
+    
+
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/documents/robotics/centroidal_dynamics/"  itemprop="url">重心動力学</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      剛体の運動方程式 \[ m_i \ddot{p_{G_i}} = \hat{f_i} + \sum_j f_{i, j} - m_i g \tag{1} \]
-\[ \dot{L_i} = \hat{\tau_i} + \sum_j \tau_{i, j} …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-
-<meta content="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Sep 22, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/robotics/">robotics</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/tips/esp32/esp32_setup/"  itemprop="url">Setup for ESP32</a>
-    </h3>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-
-<meta content="2019-09-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-20 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Sep 20, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/tips/">tips</a>, <a href="/categories/esp32/">ESP32</a>, <a href="/categories/electronic-kits/">Electronic Kits</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/tips/esp32/oled/"  itemprop="url">Using OLED(SSD1306:SPI,128x64) by ESP32</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      Pin Assintment about SSD1306:SPI,128x64
- GND
- VCC : 3.3v (or 5v)
- D0 : CLK
- D1 : MOSI
- RES : GPIO
- DC : GPIO
- CS : GPIO
-  Install …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-
-<meta content="2019-09-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-20 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Sep 20, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/tips/">tips</a>, <a href="/categories/esp32/">ESP32</a>, <a href="/categories/electronic-kits/">Electronic Kits</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-
-  
-
-
-</div>
+</article>
 
       
 

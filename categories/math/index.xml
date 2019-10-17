@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>math | atlab</title>
+    <link>/categories/math/</link>
+      <atom:link href="/categories/math/index.xml" rel="self" type="application/rss+xml" />
+    <description>math</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>math</title>
+      <link>/categories/math/</link>
+    </image>
+    
+    <item>
+      <title>特異値分解</title>
+      <link>/post/documents/math/singular_value_decomposition/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/post/documents/math/singular_value_decomposition/</guid>
+      <description>&lt;p&gt;実数行列:$A \in \mathbb{R}^{m \times n}$の特異値分解が以下のように与えられる．&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+A = USV^T =  
+\left[
+\begin{array}{rr}
+U_1 &amp; U_2
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+\Sigma_{r \times r} &amp; O_{r \times (n-r)} \\
+O_{(m-r) \times r} &amp; O_{(m-r) \times (n-r)}
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+{V_1}^T \\
+{V_2}^T
+\end{array}
+\right]
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\Sigma = \rm{diag}(\sigma_1, ... \sigma_r)
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;ここでrank$(A) = r$、$U \in \mathbb{R}^{m \times m}$，$V \in \mathbb{R}^{n \times n}$は直交行列，$\sigma_i (i = 1, ... r)$は$A$の特異値&lt;/p&gt;
+
+&lt;p&gt;擬似逆行列は&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+A^{\sharp} =  
+\left[
+\begin{array}{rr}
+U_1 &amp; U_2
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+\Sigma_{r \times r}^{-1} &amp; O_{r \times (n-r)} \\
+O_{(m-r) \times r} &amp; O_{(m-r) \times (n-r)}
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+{V_1}^T \\
+{V_2}^T
+\end{array}
+\right]
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;$U$，$V$は直交行列なので&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+U^T U = U U^T = E_m , V^T V = V V^T = E_n
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;そこで&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+V^T V =
+\left[
+\begin{array}{rr}
+V_1^T \\
+V_2^T
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+V_1 &amp; V_2
+\end{array}
+\right] =  
+\left[
+\begin{array}{rr}
+V_1^T V_1 &amp; V_1^T V_2 \\
+V_2^T V_1 &amp; V_2^T V_2
+\end{array}
+\right] =  
+E_n
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+V V^T =
+\left[
+\begin{array}{rr}
+V_1 &amp; V_2
+\end{array}
+\right]
+\left[
+\begin{array}{rr}
+V_1^T \\
+V_2^T
+\end{array}
+\right] =  
+V_1 V_1^T + V_2 V_2^T = E_n
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;であるので&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+V_1^T V_1 = E_r, V_2^T V_2 = E_{(n - r)}, V_1^T V_2 = V_2^T V_1 = O
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;ここで$V_1$，$V_2$は必ずしも正方行列ではなく$V_1 V_1^T$，$V_2 V_2^T$が単位行列ではない($A$が列フルランクなら$V = V_1$で正方行列)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
