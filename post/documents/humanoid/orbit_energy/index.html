@@ -28,10 +28,21 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="線形倒立振子 \[ \ddot{x_G} = \omega^2 x_G \tag{1} \]
+$x_G$は重心位置として，重力加速度を$g$，重心の高さ$z$で一定として$\omega^2 = \frac{g}{z}$とする.
+軌道エネルギー 式(1)の両辺に右から$x_G$をかけて
+\[ \ddot{x_G}\dot{x_G} = \omega^2 x_G \dot{x_G} \\ \frac{d}{dt} (\frac{1}{2} {\dot{x_G}}^2) = \omega^2 \frac{d}{dt}( \frac{1}{2} {x_G}^2 ) \\ \frac{d}{dt}(\frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} {x_G}^2 ) = 0 \\ \]
+以下のように軌道エネルギー$E$を定義すると
+\[ E = \frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} {x_G}^2 \tag{2} \]
+軌道エネルギーの時間変化は
+\[ \frac{d}{dt} E = 0 \]
+以上のようになるので，一定であることが分かる．
+軌道エネルギーを用いた計算 任意の重心位置，速度で目標速度$v_d$に制御するための着地点$x_z$を求める．ここで着地点$x_z$上で重心速度が$v_d$になるように計算する．
+エネルギーが一定であることから
+\[ \frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} (x_z - x_G)^2 = \frac{1}{2} {\dot{v_d}}^2 - \omega^2 \frac{1}{2} (x_z - x_z)^2 \\ {\dot{x_G}}^2 - \omega^2 (x_z - x_G)^2 = {\dot{v_d}}^2 \\ \]">
 
   
-  <link rel="alternate" hreflang="en-us" href="/404.html">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/humanoid/orbit_energy/">
 
   
 
@@ -96,7 +107,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/404.html">
+  <link rel="canonical" href="/post/documents/humanoid/orbit_energy/">
 
   
   
@@ -109,12 +120,26 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:title" content="404 Page not found | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/humanoid/orbit_energy/">
+  <meta property="og:title" content="軌道エネルギー | atlab">
+  <meta property="og:description" content="線形倒立振子 \[ \ddot{x_G} = \omega^2 x_G \tag{1} \]
+$x_G$は重心位置として，重力加速度を$g$，重心の高さ$z$で一定として$\omega^2 = \frac{g}{z}$とする.
+軌道エネルギー 式(1)の両辺に右から$x_G$をかけて
+\[ \ddot{x_G}\dot{x_G} = \omega^2 x_G \dot{x_G} \\ \frac{d}{dt} (\frac{1}{2} {\dot{x_G}}^2) = \omega^2 \frac{d}{dt}( \frac{1}{2} {x_G}^2 ) \\ \frac{d}{dt}(\frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} {x_G}^2 ) = 0 \\ \]
+以下のように軌道エネルギー$E$を定義すると
+\[ E = \frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} {x_G}^2 \tag{2} \]
+軌道エネルギーの時間変化は
+\[ \frac{d}{dt} E = 0 \]
+以上のようになるので，一定であることが分かる．
+軌道エネルギーを用いた計算 任意の重心位置，速度で目標速度$v_d$に制御するための着地点$x_z$を求める．ここで着地点$x_z$上で重心速度が$v_d$になるように計算する．
+エネルギーが一定であることから
+\[ \frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} (x_z - x_G)^2 = \frac{1}{2} {\dot{v_d}}^2 - \omega^2 \frac{1}{2} (x_z - x_z)^2 \\ {\dot{x_G}}^2 - \omega^2 (x_z - x_G)^2 = {\dot{v_d}}^2 \\ \]"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2019-10-28T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-10-28T00:00:00&#43;00:00">
   
 
   
@@ -126,7 +151,7 @@
 
 
 
-  <title>404 Page not found | atlab</title>
+  <title>軌道エネルギー | atlab</title>
 
 </head>
 
@@ -228,7 +253,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -284,49 +309,258 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">軌道エネルギー</h1>
+
+  
+
+  
     
-      <li><a href="/post/documents/humanoid/orbit_energy/">軌道エネルギー</a></li>
+
+
+
+<meta content="2019-10-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-10-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/post/documents/math/singular_value_decomposition/">特異値分解</a></li>
     
-      <li><a href="/post/documents/robotics/task_priority/">優先度付き微分逆運動学</a></li>
+      
     
-      <li><a href="/post/documents/humanoid/lipm/">線形倒立振子</a></li>
+    <time>Oct 28, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/humanoid/">humanoid</a></span>
+  
+
+  
     
-      <li><a href="/post/tips/hugo/hugo-academic/">Using Hugo-Academic</a></li>
-    
-      <li><a href="/post/documents/robotics/centroidal_dynamics/">重心動力学</a></li>
-    
-      <li><a href="/post/tips/esp32/esp32_setup/">Setup for ESP32</a></li>
-    
-      <li><a href="/post/tips/esp32/oled/">Using OLED(SSD1306:SPI,128x64) by ESP32</a></li>
-    
-      <li><a href="/publication/conference-paper/rsj2019/">ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証</a></li>
-    
-  </ul>
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="線形倒立振子">線形倒立振子</h2>
+
+<p><span  class="math">\[
+\ddot{x_G} = \omega^2 x_G \tag{1}
+\]</span></p>
+
+<p>$x_G$は重心位置として，重力加速度を$g$，重心の高さ$z$で一定として$\omega^2 = \frac{g}{z}$とする.</p>
+
+<h2 id="軌道エネルギー">軌道エネルギー</h2>
+
+<p>式(1)の両辺に右から$x_G$をかけて</p>
+
+<p><span  class="math">\[
+\ddot{x_G}\dot{x_G} = \omega^2 x_G \dot{x_G} \\
+\frac{d}{dt} (\frac{1}{2} {\dot{x_G}}^2) = \omega^2 \frac{d}{dt}( \frac{1}{2} {x_G}^2 ) \\
+\frac{d}{dt}(\frac{1}{2} {\dot{x_G}}^2 - \omega^2  \frac{1}{2} {x_G}^2 ) = 0  \\
+\]</span></p>
+
+<p>以下のように軌道エネルギー$E$を定義すると</p>
+
+<p><span  class="math">\[
+E = \frac{1}{2} {\dot{x_G}}^2 - \omega^2  \frac{1}{2} {x_G}^2 \tag{2}
+\]</span></p>
+
+<p>軌道エネルギーの時間変化は</p>
+
+<p><span  class="math">\[
+\frac{d}{dt} E = 0
+\]</span></p>
+
+<p>以上のようになるので，一定であることが分かる．</p>
+
+<h2 id="軌道エネルギーを用いた計算">軌道エネルギーを用いた計算</h2>
+
+<p>任意の重心位置，速度で目標速度$v_d$に制御するための着地点$x_z$を求める．ここで着地点$x_z$上で重心速度が$v_d$になるように計算する．<br>
+エネルギーが一定であることから</p>
+
+<p><span  class="math">\[
+\frac{1}{2} {\dot{x_G}}^2 - \omega^2  \frac{1}{2} (x_z - x_G)^2 = \frac{1}{2} {\dot{v_d}}^2 - \omega^2  \frac{1}{2} (x_z - x_z)^2 \\
+{\dot{x_G}}^2 - \omega^2  (x_z - x_G)^2 = {\dot{v_d}}^2 \\
+\]</span></p>
+
+<p><span  class="math">\[
+x_z = x_G + \frac{\sqrt{{\dot{x_G}}^2 - {v_d}^2}}{\omega} \tag{3}
+\]</span></p>
+
+<p>ここで$v_d = 0$とすると以下のようになりcapture pointに一致する</p>
+
+<p><span  class="math">\[
+x_z = x_G + \frac{\dot{x_G}}{\omega} \tag{4}
+\]</span></p>
+
+<p>軌道エネルギーの正負から重心がポテンシャルを超えられるか判定することが可能</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<ul>
+<li>S.Kajita 2005 &quot;ヒューマノイドロボット&quot; オーム社</li>
+</ul>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

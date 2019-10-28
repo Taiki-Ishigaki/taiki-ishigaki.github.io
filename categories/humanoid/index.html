@@ -116,7 +116,7 @@
   <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-09-29T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2019-10-28T00:00:00&#43;00:00">
   
 
   
@@ -320,6 +320,26 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/documents/humanoid/orbit_energy/">軌道エネルギー</a></h2>
+    <div class="article-style">
+      
+      線形倒立振子 \[ \ddot{x_G} = \omega^2 x_G \tag{1} \]
+$x_G$は重心位置として，重力加速度を$g$，重心の高さ$z$で一定として$\omega^2 = \frac{g}{z}$とする.
+軌道エネルギー 式(1)の両辺に右から$x_G$をかけて
+\[ \ddot{x_G}\dot{x_G} = \omega^2 x_G \dot{x_G} \\ \frac{d}{dt} (\frac{1}{2} {\dot{x_G}}^2) = \omega^2 \frac{d}{dt}( \frac{1}{2} {x_G}^2 ) \\ \frac{d}{dt}(\frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} {x_G}^2 ) = 0 \\ \]
+以下のように軌道エネルギー$E$を定義すると
+\[ E = \frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} {x_G}^2 \tag{2} \]
+軌道エネルギーの時間変化は
+\[ \frac{d}{dt} E = 0 \]
+以上のようになるので，一定であることが分かる．
+軌道エネルギーを用いた計算 任意の重心位置，速度で目標速度$v_d$に制御するための着地点$x_z$を求める．ここで着地点$x_z$上で重心速度が$v_d$になるように計算する．
+エネルギーが一定であることから
+\[ \frac{1}{2} {\dot{x_G}}^2 - \omega^2 \frac{1}{2} (x_z - x_G)^2 = \frac{1}{2} {\dot{v_d}}^2 - \omega^2 \frac{1}{2} (x_z - x_z)^2 \\ {\dot{x_G}}^2 - \omega^2 (x_z - x_G)^2 = {\dot{v_d}}^2 \\ \]
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/documents/humanoid/lipm/">線形倒立振子</a></h2>

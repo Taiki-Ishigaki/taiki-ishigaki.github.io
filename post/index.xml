@@ -5,12 +5,79 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 28 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>軌道エネルギー</title>
+      <link>/post/documents/humanoid/orbit_energy/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/post/documents/humanoid/orbit_energy/</guid>
+      <description>&lt;h2 id=&#34;線形倒立振子&#34;&gt;線形倒立振子&lt;/h2&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\ddot{x_G} = \omega^2 x_G \tag{1}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;$x_G$は重心位置として，重力加速度を$g$，重心の高さ$z$で一定として$\omega^2 = \frac{g}{z}$とする.&lt;/p&gt;
+
+&lt;h2 id=&#34;軌道エネルギー&#34;&gt;軌道エネルギー&lt;/h2&gt;
+
+&lt;p&gt;式(1)の両辺に右から$x_G$をかけて&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\ddot{x_G}\dot{x_G} = \omega^2 x_G \dot{x_G} \\
+\frac{d}{dt} (\frac{1}{2} {\dot{x_G}}^2) = \omega^2 \frac{d}{dt}( \frac{1}{2} {x_G}^2 ) \\
+\frac{d}{dt}(\frac{1}{2} {\dot{x_G}}^2 - \omega^2  \frac{1}{2} {x_G}^2 ) = 0  \\
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;以下のように軌道エネルギー$E$を定義すると&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+E = \frac{1}{2} {\dot{x_G}}^2 - \omega^2  \frac{1}{2} {x_G}^2 \tag{2}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;軌道エネルギーの時間変化は&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\frac{d}{dt} E = 0
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;以上のようになるので，一定であることが分かる．&lt;/p&gt;
+
+&lt;h2 id=&#34;軌道エネルギーを用いた計算&#34;&gt;軌道エネルギーを用いた計算&lt;/h2&gt;
+
+&lt;p&gt;任意の重心位置，速度で目標速度$v_d$に制御するための着地点$x_z$を求める．ここで着地点$x_z$上で重心速度が$v_d$になるように計算する．&lt;br&gt;
+エネルギーが一定であることから&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\frac{1}{2} {\dot{x_G}}^2 - \omega^2  \frac{1}{2} (x_z - x_G)^2 = \frac{1}{2} {\dot{v_d}}^2 - \omega^2  \frac{1}{2} (x_z - x_z)^2 \\
+{\dot{x_G}}^2 - \omega^2  (x_z - x_G)^2 = {\dot{v_d}}^2 \\
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+x_z = x_G + \frac{\sqrt{{\dot{x_G}}^2 - {v_d}^2}}{\omega} \tag{3}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;ここで$v_d = 0$とすると以下のようになりcapture pointに一致する&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+x_z = x_G + \frac{\dot{x_G}}{\omega} \tag{4}
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;軌道エネルギーの正負から重心がポテンシャルを超えられるか判定することが可能&lt;/p&gt;
+
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;S.Kajita 2005 &amp;quot;ヒューマノイドロボット&amp;quot; オーム社&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>特異値分解</title>
