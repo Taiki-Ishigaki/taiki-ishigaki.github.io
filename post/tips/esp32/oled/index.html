@@ -38,7 +38,7 @@
  CS : GPIO
   Install Library  スケッチ&gt;ライブラリをインクルード&gt;ライブラリを管理... search and install : Adafruit SSD1306 by Adafruit search and install : Adafruit GFX Library  Modify Library To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306
 change form
-#define SSD1306_64_48 // #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16  to">
+#define SSD1306_64_48// #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16 to">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/tips/esp32/oled/">
@@ -131,7 +131,7 @@ change form
  CS : GPIO
   Install Library  スケッチ&gt;ライブラリをインクルード&gt;ライブラリを管理... search and install : Adafruit SSD1306 by Adafruit search and install : Adafruit GFX Library  Modify Library To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306
 change form
-#define SSD1306_64_48 // #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16  to"><meta property="og:image" content="/img/icon-192.png">
+#define SSD1306_64_48// #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16 to"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -432,21 +432,15 @@ change form
 <p>To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306</p>
 
 <p>change form</p>
-
-<pre><code class="language-C">   #define SSD1306_64_48
-// #define SSD1306_128_64
-// #define SSD1306_128_32
-// #define SSD1306_96_16
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C">   <span style="color:#75715e">#</span><span style="color:#75715e">define SSD1306_64_48</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">// #define SSD1306_128_64
+</span><span style="color:#75715e"></span><span style="color:#75715e">// #define SSD1306_128_32
+</span><span style="color:#75715e"></span><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#960050;background-color:#1e0010">#</span>define SSD1306_96_16</code></pre></div>
 <p>to</p>
-
-<pre><code class="language-C">// #define SSD1306_64_48
-   #define SSD1306_128_64
-// #define SSD1306_128_32
-// #define SSD1306_96_16
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">// #define SSD1306_64_48
+</span><span style="color:#75715e"></span>   <span style="color:#75715e">#</span><span style="color:#75715e">define SSD1306_128_64</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">// #define SSD1306_128_32
+</span><span style="color:#75715e"></span><span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#960050;background-color:#1e0010">#</span>define SSD1306_96_16</code></pre></div>
 <h2 id="use-sample-program">Use Sample Program</h2>
 
 <p>at ファイル&gt;スケッチ例&gt;Adafruit SSD1306 Wemos Mini OLED&gt; ssd 1306_128x64_spi</p>

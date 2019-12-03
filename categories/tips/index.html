@@ -116,7 +116,7 @@
   <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-09-22T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2019-12-03T00:00:00&#43;00:00">
   
 
   
@@ -325,7 +325,15 @@
     <h2><a href="/post/tips/hugo/hugo-academic/">Using Hugo-Academic</a></h2>
     <div class="article-style">
       
-      reference  https://sourcethemes.com/academic/docs/  
+      hugo install 最新のhugoをインストールする（バージョンが古いとacademic-kickstarが使えない
+以下のURLより https://github.com/gohugoio/hugo/releases
+以下のようにダウンロード(20191203) wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb
+以下のコマンドでインストール
+sudo apt install ./hugo_0.60.1_Linux-64bit.debhugo version でバージョンを確認することができる
+academic-kickstar Setting  Academic KickstarレポジトリをForkする 自身のForkしたリポジトリから以下のようにclone (sorcethemesを自身のGithubユーザー名に変更)
+git clone https://github.com/sourcethemes/academic-kickstart.git My_Website テーマの初期化
+cd My_Website git submodule update --init --recursive ビルド 今回の場合ならMy_Websiteディレクトリで以下を実行しビルド
+hugo  reference  https://sourcethemes.com/academic/docs/  
       
     </div>
   </div>
@@ -358,7 +366,7 @@ Reference  https://qiita.com/WK_ZAKK/items/d7fbbb8c0c8eebe5682d
  CS : GPIO
   Install Library  スケッチ&gt;ライブラリをインクルード&gt;ライブラリを管理... search and install : Adafruit SSD1306 by Adafruit search and install : Adafruit GFX Library  Modify Library To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306
 change form
-#define SSD1306_64_48 // #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16  to
+#define SSD1306_64_48// #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16 to
       
     </div>
   </div>

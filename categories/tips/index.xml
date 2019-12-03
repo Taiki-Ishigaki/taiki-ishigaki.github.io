@@ -5,7 +5,7 @@
     <link>/categories/tips/</link>
       <atom:link href="/categories/tips/index.xml" rel="self" type="application/rss+xml" />
     <description>tips</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 22 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>tips</title>
@@ -15,9 +15,40 @@
     <item>
       <title>Using Hugo-Academic</title>
       <link>/post/tips/hugo/hugo-academic/</link>
-      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
       <guid>/post/tips/hugo/hugo-academic/</guid>
-      <description>&lt;h2 id=&#34;reference&#34;&gt;reference&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;hugo-install&#34;&gt;hugo install&lt;/h2&gt;
+
+&lt;p&gt;最新のhugoをインストールする（バージョンが古いとacademic-kickstarが使えない&lt;br&gt;
+以下のURLより
+　 &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以下のようにダウンロード(20191203)
+&lt;code&gt;wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;以下のコマンドでインストール&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install ./hugo_0.60.1_Linux-64bit.deb&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;でバージョンを確認することができる&lt;/p&gt;
+
+&lt;h2 id=&#34;academickickstar&#34;&gt;academic-kickstar&lt;/h2&gt;
+
+&lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Academic KickstarレポジトリをForkする&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;自身のForkしたリポジトリから以下のようにclone (&lt;code&gt;sorcethemes&lt;/code&gt;を自身のGithubユーザー名に変更)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;テーマの初期化&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cd My_Website &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git submodule update --init --recursive&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ビルド
+今回の場合なら&lt;code&gt;My_Website&lt;/code&gt;ディレクトリで以下を実行しビルド&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;reference&#34;&gt;reference&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;https://sourcethemes.com/academic/docs/&lt;/a&gt;&lt;/li&gt;
@@ -99,21 +130,15 @@
 &lt;p&gt;To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306&lt;/p&gt;
 
 &lt;p&gt;change form&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;   #define SSD1306_64_48
-// #define SSD1306_128_64
-// #define SSD1306_128_32
-// #define SSD1306_96_16
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;define SSD1306_64_48&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_128_64
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_128_32
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;define SSD1306_96_16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;to&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;// #define SSD1306_64_48
-   #define SSD1306_128_64
-// #define SSD1306_128_32
-// #define SSD1306_96_16
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_64_48
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;define SSD1306_128_64&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_128_32
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;define SSD1306_96_16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;use-sample-program&#34;&gt;Use Sample Program&lt;/h2&gt;
 
 &lt;p&gt;at ファイル&amp;gt;スケッチ例&amp;gt;Adafruit SSD1306 Wemos Mini OLED&amp;gt; ssd 1306_128x64_spi&lt;/p&gt;
