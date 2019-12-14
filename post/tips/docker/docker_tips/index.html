@@ -28,10 +28,15 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="docker command Dockerイメージをダウンロード docker image pull repository:tag  Dockerイメージを別名で保存 docker image tag repository:tag new_repository:new_tag  DockerHubにpush  DockerHubアカウント作成
+ DockerHubにログイン
+docker login  アカウントの確認
+docker info  プッシュ
+docker push repogitory  repogitoryの名前はDockerHubのユーザ名から始まるもの
+  ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/electronic-kits/">
+  <link rel="alternate" hreflang="en-us" href="/post/tips/docker/docker_tips/">
 
   
 
@@ -91,14 +96,12 @@
   
 
   
-  <link rel="alternate" href="/categories/electronic-kits/index.xml" type="application/rss+xml" title="atlab">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/electronic-kits/">
+  <link rel="canonical" href="/post/tips/docker/docker_tips/">
 
   
   
@@ -111,12 +114,20 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/categories/electronic-kits/">
-  <meta property="og:title" content="Electronic Kits | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/tips/docker/docker_tips/">
+  <meta property="og:title" content="Docker Tips | atlab">
+  <meta property="og:description" content="docker command Dockerイメージをダウンロード docker image pull repository:tag  Dockerイメージを別名で保存 docker image tag repository:tag new_repository:new_tag  DockerHubにpush  DockerHubアカウント作成
+ DockerHubにログイン
+docker login  アカウントの確認
+docker info  プッシュ
+docker push repogitory  repogitoryの名前はDockerHubのユーザ名から始まるもの
+  "><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-09-20T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-12-13T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-12-13T00:00:00&#43;00:00">
   
 
   
@@ -128,7 +139,7 @@
 
 
 
-  <title>Electronic Kits | atlab</title>
+  <title>Docker Tips | atlab</title>
 
 </head>
 
@@ -230,7 +241,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -286,78 +297,233 @@
 </nav>
 
 
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Docker Tips</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-12-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-12-13 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Dec 13, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/docker/">docker</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="docker-command">docker command</h2>
+
+<h3 id="dockerイメージをダウンロード">Dockerイメージをダウンロード</h3>
+
+<pre><code class="language-sh">docker image pull repository:tag
+</code></pre>
+
+<h3 id="dockerイメージを別名で保存">Dockerイメージを別名で保存</h3>
+
+<pre><code class="language-sh">docker image tag repository:tag new_repository:new_tag
+</code></pre>
+
+<h3 id="dockerhubにpush">DockerHubにpush</h3>
+
+<ol>
+<li><p>DockerHubアカウント作成</p></li>
+
+<li><p>DockerHubにログイン</p>
+
+<pre><code class="language-sh">docker login
+</code></pre></li>
+
+<li><p>アカウントの確認</p>
+
+<pre><code class="language-sh">docker info
+</code></pre></li>
+
+<li><p>プッシュ</p>
+
+<pre><code class="language-sh">docker push repogitory
+</code></pre>
+
+<p>repogitoryの名前はDockerHubのユーザ名から始まるもの</p></li>
+</ol>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
   
 
 
 
 
-
-
-
-
-
-
-
-
-  
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Electronic Kits</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/post/tips/esp32/esp32_setup/">Setup for ESP32</a></h2>
-    <div class="article-style">
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
       
-      Setup Aruduino IDE https://www.arduino.cc/en/Main/Software
-for use ESP32 on ArduinoIDE
- [Arduino-ESP32]:https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md copy of Stable release link paste : ツールバー&gt;ファイル&gt;環境設定&gt;追加のボードマネージャーのURL ボードマネージャー :ツール&gt;ボード&gt;ボードマネージャー then search ESP32 install : esp32 by Espressifl Systems  Download ドライバ https://jp.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-About Board On board LED is GPIO2 https://github.com/espressif/arduino-esp32 https://leico.github.io/TechnicalNote/Arduino/esp32-pinmap
-Use Sample Program ファイル&gt;スケッチ例
-Reference  https://qiita.com/WK_ZAKK/items/d7fbbb8c0c8eebe5682d   
-      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-  
-  <div>
-    <h2><a href="/post/tips/esp32/oled/">Using OLED(SSD1306:SPI,128x64) by ESP32</a></h2>
-    <div class="article-style">
+
+
+
       
-      Pin Assintment about SSD1306:SPI,128x64
- GND
- VCC : 3.3v (or 5v)
- D0 : CLK
- D1 : MOSI
- RES : GPIO
- DC : GPIO
- CS : GPIO
-  Install Library  スケッチ&gt;ライブラリをインクルード&gt;ライブラリを管理... search and install : Adafruit SSD1306 by Adafruit search and install : Adafruit GFX Library  Modify Library To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306
-change form
-#define SSD1306_64_48 // #define SSD1306_128_64 // #define SSD1306_128_32 // #define SSD1306_96_16  to
       
-    </div>
+    
+
+    
+
+    
+
+
   </div>
-  
-
-  
-
-</div>
+</article>
 
       
 

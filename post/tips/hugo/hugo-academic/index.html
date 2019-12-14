@@ -31,12 +31,12 @@
   <meta name="description" content="hugo install 最新のhugoをインストールする（バージョンが古いとacademic-kickstarが使えない
 以下のURLより https://github.com/gohugoio/hugo/releases
 以下のようにダウンロード(20191203)
-wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb 以下のコマンドでインストール
-sudo apt install ./hugo_0.60.1_Linux-64bit.debhugo version でバージョンを確認することができる
+wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb  以下のコマンドでインストール
+sudo apt install ./hugo_0.60.1_Linux-64bit.deb  hugo version  でバージョンを確認することができる
 academic-kickstar Setting  Academic KickstarレポジトリをForkする 自身のForkしたリポジトリから以下のようにclone (sorcethemesを自身のGithubユーザー名に変更)
-git clone https://github.com/sourcethemes/academic-kickstart.git My_Website テーマの初期化
-cd My_Website git submodule update --init --recursive ビルド 今回の場合ならMy_Websiteディレクトリで以下を実行しビルド
-hugo  reference  https://sourcethemes.com/academic/docs/  ">
+git clone https://github.com/sourcethemes/academic-kickstart.git My_Website  テーマの初期化
+cd My_Website  git submodule update --init --recursive  ビルド 今回の場合ならMy_Websiteディレクトリで以下を実行しビルド
+hugo   reference  https://sourcethemes.com/academic/docs/  ">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/tips/hugo/hugo-academic/">
@@ -122,12 +122,12 @@ hugo  reference  https://sourcethemes.com/academic/docs/  ">
   <meta property="og:description" content="hugo install 最新のhugoをインストールする（バージョンが古いとacademic-kickstarが使えない
 以下のURLより https://github.com/gohugoio/hugo/releases
 以下のようにダウンロード(20191203)
-wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb 以下のコマンドでインストール
-sudo apt install ./hugo_0.60.1_Linux-64bit.debhugo version でバージョンを確認することができる
+wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb  以下のコマンドでインストール
+sudo apt install ./hugo_0.60.1_Linux-64bit.deb  hugo version  でバージョンを確認することができる
 academic-kickstar Setting  Academic KickstarレポジトリをForkする 自身のForkしたリポジトリから以下のようにclone (sorcethemesを自身のGithubユーザー名に変更)
-git clone https://github.com/sourcethemes/academic-kickstart.git My_Website テーマの初期化
-cd My_Website git submodule update --init --recursive ビルド 今回の場合ならMy_Websiteディレクトリで以下を実行しビルド
-hugo  reference  https://sourcethemes.com/academic/docs/  "><meta property="og:image" content="/img/icon-192.png">
+git clone https://github.com/sourcethemes/academic-kickstart.git My_Website  テーマの初期化
+cd My_Website  git submodule update --init --recursive  ビルド 今回の場合ならMy_Websiteディレクトリで以下を実行しビルド
+hugo   reference  https://sourcethemes.com/academic/docs/  "><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -408,9 +408,18 @@ hugo  reference  https://sourcethemes.com/academic/docs/  "><meta property="og:i
 　 <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
 
 <p>以下のようにダウンロード(20191203)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb</code></pre></div>
+
+<pre><code class="language-sh">wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb
+</code></pre>
+
 <p>以下のコマンドでインストール</p>
-<pre><code>sudo apt install ./hugo_0.60.1_Linux-64bit.deb</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo version</code></pre></div>
+
+<pre><code>sudo apt install ./hugo_0.60.1_Linux-64bit.deb
+</code></pre>
+
+<pre><code class="language-sh">hugo version
+</code></pre>
+
 <p>でバージョンを確認することができる</p>
 
 <h2 id="academickickstar">academic-kickstar</h2>
@@ -421,14 +430,23 @@ hugo  reference  https://sourcethemes.com/academic/docs/  "><meta property="og:i
 <li>Academic KickstarレポジトリをForkする</li>
 
 <li><p>自身のForkしたリポジトリから以下のようにclone (<code>sorcethemes</code>を自身のGithubユーザー名に変更)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone https://github.com/sourcethemes/academic-kickstart.git My_Website</code></pre></div></li>
+
+<pre><code class="language-sh">git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+</code></pre></li>
 
 <li><p>テーマの初期化</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd My_Website </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git submodule update --init --recursive</code></pre></div></li>
+
+<pre><code class="language-sh">cd My_Website 
+</code></pre>
+
+<pre><code class="language-sh">git submodule update --init --recursive
+</code></pre></li>
 
 <li><p>ビルド
 今回の場合なら<code>My_Website</code>ディレクトリで以下を実行しビルド</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo</code></pre></div></li>
+
+<pre><code class="language-sh">hugo
+</code></pre></li>
 </ol>
 
 <h2 id="reference">reference</h2>
