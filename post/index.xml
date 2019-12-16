@@ -20,35 +20,22 @@
       <description>&lt;h2 id=&#34;docker-command&#34;&gt;docker command&lt;/h2&gt;
 
 &lt;h3 id=&#34;dockerイメージをダウンロード&#34;&gt;Dockerイメージをダウンロード&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker image pull repository:tag
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker image pull repository:tag&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&#34;dockerイメージを別名で保存&#34;&gt;Dockerイメージを別名で保存&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker image tag repository:tag new_repository:new_tag
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker image tag repository:tag new_repository:new_tag&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&#34;dockerhubにpush&#34;&gt;DockerHubにpush&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;DockerHubアカウント作成&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;DockerHubにログイン&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker login
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker login&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;アカウントの確認&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker info
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;プッシュ&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker push repogitory
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker push repogitory&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;repogitoryの名前はDockerHubのユーザ名から始まるもの&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -66,20 +53,25 @@
 　 &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;以下のようにダウンロード(20191203)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;wget https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_0.60.1_Linux-64bit.deb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;以下のコマンドでインストール&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt install ./hugo_0.60.1_Linux-64bit.deb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo version
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre&gt;&lt;code&gt;sudo apt install ./hugo_0.60.1_Linux-64bit.deb&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;でバージョンを確認することができる&lt;/p&gt;
 
+&lt;h2 id=&#34;hugo-基本操作&#34;&gt;hugo 基本操作&lt;/h2&gt;
+
+&lt;h3 id=&#34;ビルド&#34;&gt;ビルド&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;記事をローカルブラウザで確認&#34;&gt;記事をローカルブラウザで確認&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&#34;hugo-server-オプション&#34;&gt;hugo server オプション&lt;/h4&gt;
+
+&lt;p&gt;ファイルの変更を検知して自動検知&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server -w&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ドラフト記事も生成&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server -D&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;未来の記事を生成&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server -F&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;academickickstar&#34;&gt;academic-kickstar&lt;/h2&gt;
 
 &lt;h3 id=&#34;setting&#34;&gt;Setting&lt;/h3&gt;
@@ -88,23 +80,14 @@
 &lt;li&gt;Academic KickstarレポジトリをForkする&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;自身のForkしたリポジトリから以下のようにclone (&lt;code&gt;sorcethemes&lt;/code&gt;を自身のGithubユーザー名に変更)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;テーマの初期化&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd My_Website 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cd My_Website &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git submodule update --init --recursive&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;ビルド
 今回の場合なら&lt;code&gt;My_Website&lt;/code&gt;ディレクトリで以下を実行しビルド&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;reference&#34;&gt;reference&lt;/h2&gt;
@@ -642,21 +625,15 @@ f_{i, j} = - f_{j, i}
 &lt;p&gt;To match your device, select display size in Adafruit_SSD.h at Arduino/libraries/Adafruit_SSD1306&lt;/p&gt;
 
 &lt;p&gt;change form&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;   #define SSD1306_64_48
-// #define SSD1306_128_64
-// #define SSD1306_128_32
-// #define SSD1306_96_16
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;define SSD1306_64_48&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_128_64
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_128_32
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;define SSD1306_96_16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;to&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;// #define SSD1306_64_48
-   #define SSD1306_128_64
-// #define SSD1306_128_32
-// #define SSD1306_96_16
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_64_48
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;define SSD1306_128_64&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// #define SSD1306_128_32
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt;define SSD1306_96_16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;use-sample-program&#34;&gt;Use Sample Program&lt;/h2&gt;
 
 &lt;p&gt;at ファイル&amp;gt;スケッチ例&amp;gt;Adafruit SSD1306 Wemos Mini OLED&amp;gt; ssd 1306_128x64_spi&lt;/p&gt;
