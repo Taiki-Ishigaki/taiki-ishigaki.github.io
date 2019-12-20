@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ros | atlab</title>
+    <link>/categories/ros/</link>
+      <atom:link href="/categories/ros/index.xml" rel="self" type="application/rss+xml" />
+    <description>ros</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>ros</title>
+      <link>/categories/ros/</link>
+    </image>
+    
+    <item>
+      <title>Use of ROS</title>
+      <link>/post/tips/ros/ros-tips/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/post/tips/ros/ros-tips/</guid>
+      <description>&lt;h2 id=&#34;rviz&#34;&gt;RViz&lt;/h2&gt;
+
+&lt;p&gt;シミュレータではない，ROSでシミュレータを使いたいならGazebo&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rosrun rviz rviz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;で起動する，「/opt/ros/kinematic/bin」にパスが通っているなら以下のコマンドで省略可能&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rviz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;tf&#34;&gt;tf&lt;/h2&gt;
+
+&lt;p&gt;ブロードキャスタとリスナ
+tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ブロードキャスト
+異なる2フレーム間の相対位置を配信&lt;/li&gt;
+&lt;li&gt;リスナ
+異なる2フレーム間の相対位置を取得&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

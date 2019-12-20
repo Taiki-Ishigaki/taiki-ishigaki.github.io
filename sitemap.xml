@@ -4,12 +4,27 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/ros/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/tips/ros/ros-tips/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +34,6 @@
   
   <url>
     <loc>/post/tips/docker/docker_tips/</loc>
-    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,12 +98,12 @@
   </url>
   
   <url>
-    <loc>/tags/electronic-kits/</loc>
+    <loc>/categories/electronic-kits/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/electronic-kits/</loc>
+    <loc>/tags/electronic-kits/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url>
   
