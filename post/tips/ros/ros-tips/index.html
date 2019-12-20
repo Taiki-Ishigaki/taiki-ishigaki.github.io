@@ -28,7 +28,16 @@
   
     
   
-  <meta name="description" content="RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
+  <meta name="description" content="初めてのROS rosがインストール完了しているとして
+ワークスペースの作成と設定  任意の名前のワークスペース(例~/catkin_ws)ディレクトリとその中にsrcディレクトリを作成する
+mkdir ~/catkin_ws/src catkinワークスペースとして初期化
+cd ~/catkin_ws/src catkin_init_workspace ワークスペースのビルド
+ワークスペース直下にbuildディレクトリとdevelディレクトリが生成
+cd ~/catkin_ws catkin_make 環境変数の設定
+環境変数「$ROS_PACKAGE_PATH」に自分のワークスペースを追加する
+ワークスペースを変更したときに毎回行う必要あり
+source ~/catkin_ws/devel/setup.bash ワークスペースの環境変数を自動で読み込むようにする 新たにターミナルを起動しても自動で環境変数を読み込むように
+echo &#34;source ~/catkin_ws/devel/setup.bash&#34; &gt;&gt; ~/.bashrc  RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
 rosrun rviz rviz で起動する，「/opt/ros/kinematic/bin」にパスが通っているなら以下のコマンドで省略可能
 rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める
  ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  ">
@@ -114,7 +123,16 @@ rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに
   <meta property="og:site_name" content="atlab">
   <meta property="og:url" content="/post/tips/ros/ros-tips/">
   <meta property="og:title" content="Use of ROS | atlab">
-  <meta property="og:description" content="RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
+  <meta property="og:description" content="初めてのROS rosがインストール完了しているとして
+ワークスペースの作成と設定  任意の名前のワークスペース(例~/catkin_ws)ディレクトリとその中にsrcディレクトリを作成する
+mkdir ~/catkin_ws/src catkinワークスペースとして初期化
+cd ~/catkin_ws/src catkin_init_workspace ワークスペースのビルド
+ワークスペース直下にbuildディレクトリとdevelディレクトリが生成
+cd ~/catkin_ws catkin_make 環境変数の設定
+環境変数「$ROS_PACKAGE_PATH」に自分のワークスペースを追加する
+ワークスペースを変更したときに毎回行う必要あり
+source ~/catkin_ws/devel/setup.bash ワークスペースの環境変数を自動で読み込むようにする 新たにターミナルを起動しても自動で環境変数を読み込むように
+echo &#34;source ~/catkin_ws/devel/setup.bash&#34; &gt;&gt; ~/.bashrc  RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
 rosrun rviz rviz で起動する，「/opt/ros/kinematic/bin」にパスが通っているなら以下のコマンドで省略可能
 rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める
  ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  "><meta property="og:image" content="/img/icon-192.png">
@@ -391,7 +409,36 @@ rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <h2 id="rviz">RViz</h2>
+      <h2 id="初めてのros">初めてのROS</h2>
+
+<p>rosがインストール完了しているとして</p>
+
+<h3 id="ワークスペースの作成と設定">ワークスペースの作成と設定</h3>
+
+<ol>
+<li><p>任意の名前のワークスペース(例~/catkin_ws)ディレクトリとその中にsrcディレクトリを作成する</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir ~/catkin_ws/src</code></pre></div></li>
+
+<li><p>catkinワークスペースとして初期化</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd ~/catkin_ws/src
+catkin_init_workspace</code></pre></div></li>
+
+<li><p>ワークスペースのビルド<br>
+ワークスペース直下にbuildディレクトリとdevelディレクトリが生成</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd ~/catkin_ws
+catkin_make</code></pre></div></li>
+
+<li><p>環境変数の設定<br>
+環境変数「$ROS_PACKAGE_PATH」に自分のワークスペースを追加する<br>
+ワークスペースを変更したときに毎回行う必要あり</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">source ~/catkin_ws/devel/setup.bash</code></pre></div></li>
+
+<li><p>ワークスペースの環境変数を自動で読み込むようにする
+新たにターミナルを起動しても自動で環境変数を読み込むように</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">echo <span style="color:#e6db74">&#34;source ~/catkin_ws/devel/setup.bash&#34;</span> &gt;&gt; ~/.bashrc</code></pre></div></li>
+</ol>
+
+<h2 id="rviz">RViz</h2>
 
 <p>シミュレータではない，ROSでシミュレータを使いたいならGazebo</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rosrun rviz rviz</code></pre></div>
