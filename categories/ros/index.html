@@ -322,7 +322,7 @@
   
   
   <div>
-    <h2><a href="/post/tips/ros/ros-tips/">Use of ROS</a></h2>
+    <h2><a href="/post/tips/robotics/ros/ros-tips/">Use of ROS</a></h2>
     <div class="article-style">
       
       初めてのROS rosがインストール完了しているとして
@@ -334,7 +334,8 @@ cd ~/catkin_ws catkin_make 環境変数の設定
 環境変数「$ROS_PACKAGE_PATH」に自分のワークスペースを追加する
 ワークスペースを変更したときに毎回行う必要あり
 source ~/catkin_ws/devel/setup.bash ワークスペースの環境変数を自動で読み込むようにする 新たにターミナルを起動しても自動で環境変数を読み込むように
-echo &#34;source ~/catkin_ws/devel/setup.bash&#34; &gt;&gt; ~/.bashrc  RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
+echo &#34;source ~/catkin_ws/devel/setup.bash&#34; &gt;&gt; ~/.bashrc  catkin 参考ページ
+RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
 rosrun rviz rviz で起動する，「/opt/ros/kinematic/bin」にパスが通っているなら以下のコマンドで省略可能
 rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める
  ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  rqt Robot Steering rqt Plugins-&gt;Robot Tools-&gt;Robot Steering トピック名を変更

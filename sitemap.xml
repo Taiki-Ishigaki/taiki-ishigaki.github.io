@@ -18,12 +18,17 @@
   </url>
   
   <url>
+    <loc>/categories/robotics/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/ros/</loc>
     <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/tips/ros/ros-tips/</loc>
+    <loc>/post/tips/robotics/ros/ros-tips/</loc>
     <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,11 +83,6 @@
   </url>
   
   <url>
-    <loc>/categories/robotics/</loc>
-    <lastmod>2019-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/documents/robotics/task_priority/</loc>
     <lastmod>2019-10-09T00:00:00+00:00</lastmod>
   </url>
@@ -108,12 +108,12 @@
   </url>
   
   <url>
-    <loc>/tags/esp32/</loc>
+    <loc>/categories/esp32/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/esp32/</loc>
+    <loc>/tags/esp32/</loc>
     <lastmod>2019-09-20T00:00:00+00:00</lastmod>
   </url>
   
