@@ -338,7 +338,9 @@ echo &#34;source ~/catkin_ws/devel/setup.bash&#34; &gt;&gt; ~/.bashrc  catkin �
 RViz シミュレータではない，ROSでシミュレータを使いたいならGazebo
 rosrun rviz rviz で起動する，「/opt/ros/kinematic/bin」にパスが通っているなら以下のコマンドで省略可能
 rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める
- ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  rqt Robot Steering rqt Plugins-&gt;Robot Tools-&gt;Robot Steering トピック名を変更
+ ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  ブロードキャスト コード StaticTransformBroadcasterとTransformBroadcasterに2種類がある
+ツール rosrun tf2ros static_transform_publisher x y z yaw pitch roll frame_id child_frame_id もしくは
+rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id rqt Robot Steering rqt Plugins-&gt;Robot Tools-&gt;Robot Steering トピック名を変更
       
     </div>
   </div>
