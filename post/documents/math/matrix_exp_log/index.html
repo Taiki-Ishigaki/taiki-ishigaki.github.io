@@ -28,10 +28,14 @@
   
     
   
-  <meta name="description" content="Master Student of Mecano-Informatics">
+  <meta name="description" content="対角化可能行列の指数関数 ある正方行列$A (= P \Lambda P^{-1} )$が対角可能なとき
+\[ A^k = (P \Lambda P^{-1})^k = (P \Lambda P^{-1}) \cdots (P \Lambda P^{-1}) = P \Lambda^k P \]
+となる。ただし、$ \Lambda = \rm{diag}(\lambda_i)$
+このとき
+\[ e^{Ax} = e^{(P \Lambda P^{-1})x} = E &#43; (P \Lambda P^{-1}) x &#43; \frac{(P \Lambda P^{-1})^2 x^2}{2!} &#43; \cdots &#43; \frac{(P \Lambda P^{-1})^k x^k}{k!} &#43; \cdots \\ = P (E &#43; \Lambda x &#43; \frac{ \Lambda^2 x^2}{2!} &#43; \cdots &#43; \frac{\Lambda^k x^k}{k!">
 
   
-  <link rel="alternate" hreflang="en-us" href="/categories/">
+  <link rel="alternate" hreflang="en-us" href="/post/documents/math/matrix_exp_log/">
 
   
 
@@ -91,14 +95,12 @@
   
 
   
-  <link rel="alternate" href="/categories/index.xml" type="application/rss+xml" title="atlab">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/categories/">
+  <link rel="canonical" href="/post/documents/math/matrix_exp_log/">
 
   
   
@@ -111,12 +113,19 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="atlab">
-  <meta property="og:url" content="/categories/">
-  <meta property="og:title" content="Categories | atlab">
-  <meta property="og:description" content="Master Student of Mecano-Informatics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/post/documents/math/matrix_exp_log/">
+  <meta property="og:title" content="行列の指数・対数 | atlab">
+  <meta property="og:description" content="対角化可能行列の指数関数 ある正方行列$A (= P \Lambda P^{-1} )$が対角可能なとき
+\[ A^k = (P \Lambda P^{-1})^k = (P \Lambda P^{-1}) \cdots (P \Lambda P^{-1}) = P \Lambda^k P \]
+となる。ただし、$ \Lambda = \rm{diag}(\lambda_i)$
+このとき
+\[ e^{Ax} = e^{(P \Lambda P^{-1})x} = E &#43; (P \Lambda P^{-1}) x &#43; \frac{(P \Lambda P^{-1})^2 x^2}{2!} &#43; \cdots &#43; \frac{(P \Lambda P^{-1})^k x^k}{k!} &#43; \cdots \\ = P (E &#43; \Lambda x &#43; \frac{ \Lambda^2 x^2}{2!} &#43; \cdots &#43; \frac{\Lambda^k x^k}{k!"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-01-08T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2020-01-08T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-01-08T00:00:00&#43;00:00">
   
 
   
@@ -128,7 +137,7 @@
 
 
 
-  <title>Categories | atlab</title>
+  <title>行列の指数・対数 | atlab</title>
 
 </head>
 
@@ -230,7 +239,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post"><span>Posts</span></a>
         </li>
 
         
@@ -286,101 +295,215 @@
 </nav>
 
 
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">行列の指数・対数</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2020-01-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-01-08 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jan 8, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/math/">math</a></span>
+  
+
+  
+    
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="対角化可能行列の指数関数">対角化可能行列の指数関数</h2>
+
+<p>ある正方行列$A (= P \Lambda P^{-1} )$が対角可能なとき</p>
+
+<p><span  class="math">\[
+A^k = (P \Lambda P^{-1})^k = (P \Lambda P^{-1}) \cdots (P \Lambda P^{-1}) = P \Lambda^k P
+\]</span></p>
+
+<p>となる。ただし、$ \Lambda = \rm{diag}(\lambda_i)$</p>
+
+<p>このとき</p>
+
+<p><span  class="math">\[
+e^{Ax} = e^{(P \Lambda P^{-1})x} = E + (P \Lambda P^{-1}) x + \frac{(P \Lambda P^{-1})^2 x^2}{2!} + \cdots + \frac{(P \Lambda P^{-1})^k x^k}{k!} + \cdots \\
+= P (E + \Lambda x + \frac{ \Lambda^2 x^2}{2!} + \cdots + \frac{\Lambda^k x^k}{k!} + \cdots) P^{-1} = P e^{\Lambda} P^{-1}
+\]</span></p>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
   
 
 
 
 
-
-
-
-
-
-
-
-
-  
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Categories</h1>
-
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
-  
-  <div>
-    <h2><a href="/categories/math/">math</a></h2>
-    <div class="article-style">
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
       
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
+      <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
+      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/at0m0os0" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/taiki-ishigaki" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-  
-  <div>
-    <h2><a href="/categories/robotics/">robotics</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/ros/">ros</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/docker/">docker</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/tips/">tips</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/humanoid/">humanoid</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/electronic-kits/">Electronic Kits</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/categories/esp32/">ESP32</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
 
-  
 
-</div>
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
 
       
 

@@ -5,12 +5,36 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>行列の指数・対数</title>
+      <link>/post/documents/math/matrix_exp_log/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/post/documents/math/matrix_exp_log/</guid>
+      <description>&lt;h2 id=&#34;対角化可能行列の指数関数&#34;&gt;対角化可能行列の指数関数&lt;/h2&gt;
+
+&lt;p&gt;ある正方行列$A (= P \Lambda P^{-1} )$が対角可能なとき&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+A^k = (P \Lambda P^{-1})^k = (P \Lambda P^{-1}) \cdots (P \Lambda P^{-1}) = P \Lambda^k P
+\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;となる。ただし、$ \Lambda = \rm{diag}(\lambda_i)$&lt;/p&gt;
+
+&lt;p&gt;このとき&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+e^{Ax} = e^{(P \Lambda P^{-1})x} = E + (P \Lambda P^{-1}) x + \frac{(P \Lambda P^{-1})^2 x^2}{2!} + \cdots + \frac{(P \Lambda P^{-1})^k x^k}{k!} + \cdots \\
+= P (E + \Lambda x + \frac{ \Lambda^2 x^2}{2!} + \cdots + \frac{\Lambda^k x^k}{k!} + \cdots) P^{-1} = P e^{\Lambda} P^{-1}
+\]&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Use of ROS</title>
