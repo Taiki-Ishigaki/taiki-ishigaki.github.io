@@ -78,13 +78,34 @@ tfはリスナの問い合わせに対してブロードキャストによって
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rosrun tf2ros static_transform_publisher x y z yaw pitch roll frame_id child_frame_id&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;もしくは&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;rostopic&#34;&gt;rostopic&lt;/h2&gt;
+
+&lt;p&gt;トピックの確認&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rostopic list&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;トピックの内容確認&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rostopic echo &amp;lt;topic_name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;トピックが送信されてるか確認&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rostopic hz &amp;lt;topic_name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;rqt&#34;&gt;rqt&lt;/h2&gt;
 
 &lt;h3 id=&#34;robot-steering&#34;&gt;Robot Steering&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rqt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Plugins-&amp;gt;Robot Tools-&amp;gt;Robot Steering
 トピック名を変更&lt;/p&gt;
-</description>
+
+&lt;h3 id=&#34;rqtimageview&#34;&gt;rqt_image_view&lt;/h3&gt;
+
+&lt;p&gt;imageトピックを確認する&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rqt_image_view&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;joy&#34;&gt;joy&lt;/h2&gt;
+
+&lt;p&gt;ジョイコントローラ用のパッケージ&lt;/p&gt;
+
+&lt;h3 id=&#34;joy用のパッケージのインストール&#34;&gt;joy用のパッケージのインストール&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo apt-get install ros-kinetic-joy
+sudo apt-get install ros-kinetic-joystick-drivers&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&#34;実行&#34;&gt;実行&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;rosrun joy joy_node&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

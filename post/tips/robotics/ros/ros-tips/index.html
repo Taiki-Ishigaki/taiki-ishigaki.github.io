@@ -43,7 +43,7 @@ rosrun rviz rviz で起動する，「/opt/ros/kinematic/bin」にパスが通�
 rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める
  ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  ブロードキャスト コード StaticTransformBroadcasterとTransformBroadcasterに2種類がある
 ツール rosrun tf2ros static_transform_publisher x y z yaw pitch roll frame_id child_frame_id もしくは
-rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id rqt Robot Steering rqt Plugins-&gt;Robot Tools-&gt;Robot Steering トピック名を変更">
+rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id rostopic トピックの確認">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/tips/robotics/ros/ros-tips/">
@@ -141,7 +141,7 @@ rosrun rviz rviz で起動する，「/opt/ros/kinematic/bin」にパスが通�
 rviz tf ブロードキャスタとリスナ tfはリスナの問い合わせに対してブロードキャストによって得られる情報から2フレーム間の相対位置を求める
  ブロードキャスト 異なる2フレーム間の相対位置を配信 リスナ 異なる2フレーム間の相対位置を取得  ブロードキャスト コード StaticTransformBroadcasterとTransformBroadcasterに2種類がある
 ツール rosrun tf2ros static_transform_publisher x y z yaw pitch roll frame_id child_frame_id もしくは
-rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id rqt Robot Steering rqt Plugins-&gt;Robot Tools-&gt;Robot Steering トピック名を変更"><meta property="og:image" content="/img/icon-192.png">
+rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id rostopic トピックの確認"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -476,6 +476,14 @@ tfはリスナの問い合わせに対してブロードキャストによって
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rosrun tf2ros static_transform_publisher x y z yaw pitch roll frame_id child_frame_id</code></pre></div>
 <p>もしくは</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rosrun tf2ros static_transform_publisher x y z qx qy qz qw frame_id child_frame_id</code></pre></div>
+<h2 id="rostopic">rostopic</h2>
+
+<p>トピックの確認</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rostopic list</code></pre></div>
+<p>トピックの内容確認</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rostopic echo &lt;topic_name&gt;</code></pre></div>
+<p>トピックが送信されてるか確認</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rostopic hz &lt;topic_name&gt;</code></pre></div>
 <h2 id="rqt">rqt</h2>
 
 <h3 id="robot-steering">Robot Steering</h3>
@@ -483,6 +491,19 @@ tfはリスナの問い合わせに対してブロードキャストによって
 <p>Plugins-&gt;Robot Tools-&gt;Robot Steering
 トピック名を変更</p>
 
+<h3 id="rqtimageview">rqt_image_view</h3>
+
+<p>imageトピックを確認する</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rqt_image_view</code></pre></div>
+<h2 id="joy">joy</h2>
+
+<p>ジョイコントローラ用のパッケージ</p>
+
+<h3 id="joy用のパッケージのインストール">joy用のパッケージのインストール</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get install ros-kinetic-joy
+sudo apt-get install ros-kinetic-joystick-drivers</code></pre></div>
+<h3 id="実行">実行</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rosrun joy joy_node</code></pre></div>
     </div>
 
     
@@ -523,7 +544,7 @@ tfはリスナの問い合わせに対してブロードキャストによって
     <div class="media-body">
       <h5 class="card-title" itemprop="name"><a href="/">Taiki Ishigaki</a></h5>
       <h6 class="card-subtitle">Master Student of Mecano-Informatics</h6>
-      <p class="card-text" itemprop="description">My research interests include humanoid robotics.</p>
+      <p class="card-text" itemprop="description">My research is humanoid robotics.</p>
       <ul class="network-icon" aria-hidden="true">
         
           
