@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Taiki Ishigaki | Academic CV</title>
+	<style>
+		:root {
+			--bg: #ece6dd;
+			--paper: #fffdf9;
+			--ink: #211d1a;
+			--muted: #6b6259;
+			--line: #d9d0c6;
+			--accent: #9a3d2e;
+			--accent-soft: #f6ece7;
+			--panel: #f7f2ea;
+			--shadow: rgba(53, 35, 24, 0.14);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			color: var(--ink);
+			font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+			line-height: 1.75;
+			background:
+				radial-gradient(circle at top left, rgba(154, 61, 46, 0.12), transparent 28rem),
+				linear-gradient(180deg, #f3ede4 0%, var(--bg) 100%);
+		}
+
+		a {
+			color: var(--accent);
+			text-decoration: none;
+			border-bottom: 1px solid rgba(154, 61, 46, 0.28);
+		}
+
+		a:hover {
+			border-bottom-color: rgba(154, 61, 46, 0.55);
+		}
+
+		.page {
+			padding: 40px 20px 64px;
+		}
+
+		.sheet {
+			max-width: 1080px;
+			margin: 0 auto;
+			padding: 42px 44px 32px;
+			background: var(--paper);
+			border: 1px solid rgba(113, 88, 67, 0.18);
+			box-shadow: 0 26px 60px var(--shadow);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.sheet::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 10px;
+			background: linear-gradient(90deg, #a44433 0%, #c18a44 52%, #2f5d66 100%);
+		}
+
+		.header {
+			display: grid;
+			grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.95fr);
+			gap: 28px;
+			align-items: start;
+		}
+
+		.eyebrow {
+			margin: 0 0 0.85rem;
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.78rem;
+			font-weight: 600;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--accent);
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(2.35rem, 4vw, 3.6rem);
+			line-height: 1.05;
+			letter-spacing: -0.03em;
+		}
+
+		h1 span {
+			display: block;
+			margin-top: 0.4rem;
+			font-size: clamp(1rem, 2vw, 1.35rem);
+			font-weight: 400;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--muted);
+		}
+
+		.subtitle {
+			margin: 1rem 0 0;
+			font-size: 1.08rem;
+			color: var(--muted);
+		}
+
+		.summary-box {
+			margin-top: 1.4rem;
+			padding: 16px 18px;
+			background: linear-gradient(180deg, #fff 0%, var(--accent-soft) 100%);
+			border: 1px solid var(--line);
+		}
+
+		.summary-box p {
+			margin: 0;
+		}
+
+		.summary-meta {
+			margin-top: 0.85rem;
+		}
+
+		.summary-meta .label {
+			margin-bottom: 0.45rem;
+		}
+
+		.contact-card {
+			padding: 18px 18px 16px;
+			background: var(--panel);
+			border: 1px solid var(--line);
+		}
+
+		.contact-block + .contact-block {
+			margin-top: 0.85rem;
+			padding-top: 0.85rem;
+			border-top: 1px solid rgba(113, 88, 67, 0.18);
+		}
+
+		.label {
+			margin-bottom: 0.35rem;
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.74rem;
+			font-weight: 600;
+			letter-spacing: 0.16em;
+			text-transform: uppercase;
+			color: var(--muted);
+		}
+
+		.contact-card p {
+			margin: 0;
+		}
+
+		.pill-list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.pill-list li {
+			padding: 0.28rem 0.64rem;
+			border-radius: 999px;
+			background: #fff;
+			border: 1px solid rgba(113, 88, 67, 0.18);
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.82rem;
+		}
+
+		.section {
+			padding-top: 18px;
+			margin-top: 18px;
+			border-top: 1px solid var(--line);
+		}
+
+		.section-header {
+			margin-bottom: 0.85rem;
+		}
+
+		.section-label {
+			display: inline-block;
+			margin-bottom: 0.35rem;
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.73rem;
+			font-weight: 600;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--accent);
+		}
+
+		.section-title {
+			margin: 0;
+			font-size: 1.38rem;
+			line-height: 1.15;
+		}
+
+		.metrics {
+			display: grid;
+			grid-template-columns: repeat(6, minmax(0, 1fr));
+			gap: 12px;
+		}
+
+		.metric {
+			padding: 14px 12px;
+			background: var(--panel);
+			border: 1px solid var(--line);
+			text-align: center;
+		}
+
+		.metric-value {
+			display: block;
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 1.65rem;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		.metric-label {
+			display: block;
+			margin-top: 0.42rem;
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.74rem;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--muted);
+		}
+
+		.main {
+			display: grid;
+			grid-template-columns: minmax(0, 1.24fr) minmax(0, 1fr);
+			gap: 28px;
+		}
+
+		.timeline {
+			display: grid;
+			gap: 10px;
+		}
+
+		.timeline-item {
+			display: grid;
+			grid-template-columns: 112px minmax(0, 1fr);
+			gap: 12px;
+			align-items: start;
+		}
+
+		.time {
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.9rem;
+			font-weight: 600;
+			color: var(--muted);
+		}
+
+		.item-title {
+			margin: 0;
+			font-size: 0.96rem;
+			font-weight: 700;
+		}
+
+		.item-meta {
+			margin: 0.12rem 0 0;
+			color: var(--muted);
+			font-size: 0.94rem;
+		}
+
+		.publication-list,
+		.bullet-list {
+			margin: 0;
+			padding-left: 1.35rem;
+		}
+
+		.publication-list li,
+		.bullet-list li {
+			margin-bottom: 0.55rem;
+		}
+
+		.mini-card {
+			padding: 12px 14px;
+			background: var(--panel);
+			border: 1px solid var(--line);
+		}
+
+		.metric,
+		.timeline-item,
+		.mini-card,
+		.section {
+			break-inside: avoid;
+			page-break-inside: avoid;
+		}
+
+		.mini-card + .mini-card {
+			margin-top: 8px;
+		}
+
+		.mini-card h3 {
+			margin: 0 0 0.5rem;
+			font-size: 1rem;
+		}
+
+		.mini-card p {
+			margin: 0;
+			color: var(--muted);
+		}
+
+		.footer {
+			margin-top: 28px;
+			padding-top: 18px;
+			border-top: 1px solid var(--line);
+			font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+			font-size: 0.84rem;
+			color: var(--muted);
+		}
+
+		.compact-list {
+			margin: 0;
+			padding-left: 1.15rem;
+		}
+
+		.compact-list li {
+			margin-bottom: 0.45rem;
+		}
+
+		@media (max-width: 920px) {
+			.sheet {
+				padding: 34px 22px 28px;
+			}
+
+			.header,
+			.main {
+				grid-template-columns: 1fr;
+			}
+
+			.metrics {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+		}
+
+		@media (max-width: 640px) {
+			.page {
+				padding: 18px 10px 32px;
+			}
+
+			.metrics {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.timeline-item {
+				grid-template-columns: 1fr;
+				gap: 4px;
+			}
+		}
+
+		@media print {
+			@page {
+				size: A4;
+				margin: 8mm;
+			}
+
+			body {
+				background: #fff;
+				font-size: 8.4pt;
+				line-height: 1.24;
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+
+			.page {
+				padding: 0;
+			}
+
+			.sheet {
+				max-width: none;
+				padding: 0;
+				border: none;
+				box-shadow: none;
+			}
+
+			.sheet::before {
+				display: none;
+			}
+
+			.header {
+				grid-template-columns: minmax(0, 1.48fr) minmax(0, 1fr);
+				gap: 4.5mm;
+			}
+
+			.eyebrow {
+				margin-bottom: 1.2mm;
+				font-size: 6.3pt;
+			}
+
+			h1 {
+				font-size: 19pt;
+			}
+
+			.subtitle {
+				margin-top: 0.9mm;
+				font-size: 8.6pt;
+			}
+
+			.summary-box {
+				margin-top: 1.6mm;
+				padding: 1.8mm 2.2mm;
+			}
+
+			.summary-meta {
+				margin-top: 1.2mm;
+			}
+
+			.summary-meta .label {
+				margin-bottom: 0.35mm;
+			}
+
+			.contact-card {
+				padding: 1.8mm 2.2mm 1.6mm;
+			}
+
+			.contact-block + .contact-block {
+				margin-top: 1.4mm;
+				padding-top: 1.4mm;
+			}
+
+			.label {
+				margin-bottom: 0.4mm;
+				font-size: 5.8pt;
+			}
+
+			.pill-list {
+				gap: 1mm;
+			}
+
+			.pill-list li {
+				padding: 0.45mm 1.2mm;
+				font-size: 6.2pt;
+			}
+
+			.contact-card,
+			.metric,
+			.mini-card,
+			.summary-box {
+				background: transparent;
+			}
+
+			.section {
+				padding-top: 1.7mm;
+				margin-top: 1.7mm;
+			}
+
+			.section-header {
+				margin-bottom: 0.8mm;
+			}
+
+			.section-label {
+				margin-bottom: 0.25mm;
+				font-size: 5.8pt;
+			}
+
+			.section-title {
+				font-size: 10pt;
+			}
+
+			.metrics {
+				display: none;
+			}
+
+			.main {
+				gap: 3.4mm;
+			}
+
+			.timeline {
+				gap: 1.1mm;
+			}
+
+			.timeline-item {
+				grid-template-columns: 20mm minmax(0, 1fr);
+				gap: 1.8mm;
+			}
+
+			.time,
+			.item-title,
+			.item-meta,
+			.publication-list li,
+			.bullet-list li,
+			.compact-list li,
+			.mini-card p,
+			.contact-card p,
+			.summary-box p {
+				font-size: 7.3pt;
+			}
+
+			.publication-list,
+			.bullet-list,
+			.compact-list {
+				padding-left: 2.8mm;
+			}
+
+			.publication-list li,
+			.bullet-list li,
+			.compact-list li {
+				margin-bottom: 0.7mm;
+			}
+
+			.mini-card {
+				padding: 1.3mm 1.8mm;
+			}
+
+			.mini-card h3 {
+				font-size: 7.5pt;
+				margin-bottom: 0.3mm;
+			}
+
+			.footer {
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="sheet">
+			<header class="header">
+				<div>
+					<p class="eyebrow">Academic Curriculum Vitae / Updated May 20, 2026</p>
+					<h1>Taiki Ishigaki</h1>
+					<p class="subtitle">Ph.D. in Information Science and Technology | Assistant Professor, Tokyo University of Science</p>
+					<div class="summary-box">
+						<p>Research interests: hybrid-link system dynamics, differentiable simulation, distance fields in configuration spaces, humanoid control, soft robotics, and human motion analysis for flexible embodied systems.</p>
+					</div>
+					<div class="summary-meta">
+						<div class="label">Research Keywords</div>
+						<ul class="pill-list">
+							<li>Hybrid-link system</li>
+							<li>Config-space distance fields</li>
+							<li>Humanoid control</li>
+							<li>Soft robotics</li>
+							<li>Human motion analysis</li>
+						</ul>
+					</div>
+				</div>
+
+				<aside class="contact-card">
+					<div class="contact-block">
+						<div class="label">Current Affiliation</div>
+						<p>Tokyo University of Science, Research Institute for Science and Technology</p>
+						<p>Department of Functional Design Engineering, Faculty of Advanced Engineering</p>
+						<p><a href="https://www.rs.tus.ac.jp/yoshida-lab/">Interactive Robotics Laboratory</a></p>
+					</div>
+					<div class="contact-block">
+						<div class="label">Position</div>
+						<p>Assistant Professor</p>
+					</div>
+					<div class="contact-block">
+						<div class="label">E-mail</div>
+						<p>taiki000ishigaki [at] gmail.com</p>
+					</div>
+				</aside>
+			</header>
+
+			<div class="main">
+				<div>
+					<section class="section">
+						<div class="section-header">
+							<span class="section-label">Career</span>
+							<h2 class="section-title">Academic Appointments</h2>
+						</div>
+						<div class="timeline">
+							<div class="timeline-item">
+								<div class="time">Apr. 2025 - Present</div>
+								<div>
+									<p class="item-title">Assistant Professor</p>
+									<p class="item-meta">Tokyo University of Science</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<div class="time">Apr. 2024 - Mar. 2025</div>
+								<div>
+									<p class="item-title">Project Researcher</p>
+									<p class="item-meta">The University of Tokyo</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<div class="time">Aug. 2024 - Mar. 2025</div>
+								<div>
+									<p class="item-title">Collaborative Researcher</p>
+									<p class="item-meta">AIST</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<div class="time">Feb. 2021 - Mar. 2021</div>
+								<div>
+									<p class="item-title">Technical Research Assistant</p>
+									<p class="item-meta">The University of Tokyo</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section">
+						<div class="section-header">
+							<span class="section-label">Education</span>
+							<h2 class="section-title">Education</h2>
+						</div>
+						<div class="timeline">
+							<div class="timeline-item">
+								<div class="time">Apr. 2021 - Mar. 2024</div>
+								<div>
+									<p class="item-title">Doctoral Program, Ph.D. in Information Science and Technology</p>
+									<p class="item-meta">The University of Tokyo</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<div class="time">Apr. 2019 - Mar. 2021</div>
+								<div>
+									<p class="item-title">Master's Program</p>
+									<p class="item-meta">The University of Tokyo</p>
+								</div>
+							</div>
+							<div class="timeline-item">
+								<div class="time">Apr. 2015 - Mar. 2019</div>
+								<div>
+									<p class="item-title">Bachelor's Program</p>
+									<p class="item-meta">Yokohama National University / Materials Engineering major, Robotics and Mechatronics minor</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section">
+						<div class="section-header">
+							<span class="section-label">Selected Works</span>
+							<h2 class="section-title">Selected Publications and Book</h2>
+						</div>
+						<ol class="publication-list">
+							<li><strong>Taiki Ishigaki</strong>, Ko Ayusawa, Ko Yamamoto, and Eiichi Yoshida, <a href="https://www.rsj.or.jp/pub/jrsj/advpub/260219-04.html">"Expanded Motion Computation Theory: Higher-Order Differential Kinematics from Rigid-Link Systems to Continuous Flexible Rods"</a>, Journal of the Robotics Society of Japan, 2026. [in Japanese]</li>
+							<li><strong>Taiki Ishigaki</strong>, Teresa Vidal-Calleja, Ko Ayusawa, and Eiichi Yoshida, "Implicit Null-space Manifold Generation for Redundant Robotic Systems," RSS 2026, accepted.</li>
+							<li>Sunghee Kim, Yuta Shimane, <strong>Taiki Ishigaki</strong>, and Ko Yamamoto, <a href="https://doi.org/10.1080/01691864.2025.2611426">"Dynamics computation of soft-rigid hybrid-link system and its application to motion analysis of an athlete wearing sport prosthesis"</a>, Advanced Robotics, 2026.</li>
+							<li><strong>Taiki Ishigaki</strong>, Ko Ayusawa, and Ko Yamamoto, <a href="https://doi.org/10.1109/LRA.2025.3548497">"Unified Framework of Gradient Computation for Hybrid-Link System and Its Dynamical Simulation by Implicit Method"</a>, IEEE Robotics and Automation Letters, 2025.</li>
+							<li><strong>Taiki Ishigaki</strong>, Ko Ayusawa, and Ko Yamamoto, <a href="https://doi.org/10.1109/LRA.2024.3397530">"Comprehensive Gradient Computation Framework of PCS Model for Soft Robot Simulation"</a>, IEEE Robotics and Automation Letters, 2024.</li>
+							<li>Ko Yamamoto, <strong>Taiki Ishigaki</strong>, and Yoshihiko Nakamura, <a href="https://doi.org/10.1109/TRO.2021.3119934">"Humanoid Motion Control by Compliance Optimization Explicitly Considering its Positive Definiteness"</a>, IEEE Transactions on Robotics, 2022.</li>
+							<li><strong>Taiki Ishigaki</strong> and Ko Yamamoto, <a href="https://doi.org/10.1109/IROS51168.2021.9636733">"Dynamics Computation of a Hybrid Multi-link Humanoid Robot Integrating Rigid and Soft Bodies"</a>, IROS 2021.</li>
+							<li>Ko Yamamoto, Ko Ayusawa, and <strong>Taiki Ishigaki</strong>, <em>Robot Motion Computation Theory</em>, Corona Publishing, Apr. 2026. Textbook contribution on motion computation for robotic systems. [in Japanese]</li>
+						</ol>
+					</section>
+				</div>
+
+				<div>
+					<section class="section">
+						<div class="section-header">
+							<span class="section-label">Recognition</span>
+							<h2 class="section-title">Awards and Honors</h2>
+						</div>
+						<ul class="compact-list">
+							<li><strong>2026:</strong> Excellent Paper Award, 31st Robotics Symposia, for higher-order differential kinematics and optimization of multi-link systems.</li>
+							<li><strong>2024:</strong> ROBOMECH Award, Academic Research Category, for high-speed forward dynamics simulation of hybrid rigid-soft link systems.</li>
+							<li><strong>2023:</strong> Outstanding Research and Technology Award, Robotics Society of Japan, for PCS-model-based deformation analysis and viscosity estimation of sports prostheses.</li>
+						</ul>
+					</section>
+
+					<section class="section">
+						<div class="section-header">
+							<span class="section-label">Funding</span>
+							<h2 class="section-title">Grants and Fellowships</h2>
+						</div>
+						<ul class="compact-list">
+							<li><strong>2025-2028:</strong> JSPS KAKENHI Early-Career Scientists, supporting differential motion computation theory for dynamic identification of hybrid-link systems.</li>
+							<li><strong>2025-2026:</strong> Foundation for the Fusion of Science and Technology, supporting data assimilation methods for simulation of flexible sports tools.</li>
+							<li><strong>2024-2025:</strong> <a href="https://www.ura.adm.u-tokyo.ac.jp/services/view/adbc39bf-fbe2-44f4-9049-20a3c52d6796">Daiichi-Sankyo "Habataku" Support Program</a>, supporting differentiable hybrid-link simulation for humans and soft-rigid robots.</li>
+							<li><strong>2021-2024:</strong> International Graduate Program of Excellence for an Intelligent Society Fellowship, supporting doctoral research at The University of Tokyo.</li>
+						</ul>
+					</section>
+
+					<section class="section">
+						<div class="section-header">
+							<span class="section-label">Community</span>
+							<h2 class="section-title">Academic Service</h2>
+						</div>
+						<ul class="compact-list">
+							<li>Associate Editor: Humanoids 2025; Organizing Committee Member: HVAC2026.</li>
+							<li>Reviewer: ICRA, IROS, Humanoids, ISRR, SII, RA-L, T-RO, and Advanced Robotics.</li>
+							<li>Professional memberships: Robotics Society of Japan, Society of Instrument and Control Engineers, Japan Society of Mechanical Engineers, and IEEE.</li>
+						</ul>
+					</section>
+
+				</div>
+			</div>
+
+			<footer class="footer">
+				<p>This English-style CV was generated from the full research profile in <a href="index.html">index.html</a>. Full publication and presentation details remain on the original page.</p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
