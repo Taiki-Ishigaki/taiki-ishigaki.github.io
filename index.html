@@ -51,6 +51,54 @@
 		a {
 			color: #333;
 		}
+
+		/* 論文リンク: .publication-links 内の a に種類のクラスを指定 */
+		.publication-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+			margin-top: 5px;
+		}
+
+		.publication-links a {
+			--link-color: #374151;
+			display: inline-block;
+			padding: 1px 6px;
+			border: 1px solid #d1d5db;
+			border-radius: 3px;
+			color: var(--link-color);
+			background-color: #fff;
+			font-size: 0.75em;
+			font-weight: normal;
+			line-height: 1.5;
+			text-decoration: none;
+		}
+
+		.publication-links .paper { --link-color: #465e80; }
+		.publication-links .arxiv { --link-color: #805050; }
+		.publication-links .youtube { --link-color: #805050; }
+
+		/* Paperリンクに open-access を追加すると公開状態を併記 */
+		.publication-links .paper.open-access::after {
+			content: "Open Access";
+			display: inline-block;
+			margin-left: 5px;
+			padding-left: 5px;
+			border-left: 1px solid #d1d5db;
+			color: #4d6855;
+			font-size: 0.9em;
+		}
+
+		.publication-links a:hover {
+			background-color: #f5f6f8;
+			border-color: var(--link-color);
+			text-decoration: underline;
+		}
+
+		.publication-links a:focus-visible {
+			outline: 2px solid var(--link-color);
+			outline-offset: 3px;
+		}
 		
 		ul {
 			margin: 0;
@@ -190,123 +238,155 @@
 	</section> -->
 	<section>
 		<h2>Publications</h2>
+		<!--
+			リンク追加用テンプレート: 各論文の </li> の直前にコピーし、URLを置き換えてください。
+			タイトルは <span class="publication-title">タイトル</span> で囲み、英語はTitle Case（前置詞・冠詞・接続詞などは小文字）で記入してください。
+			必要なリンクだけ残して使えます。新しいタブで開く設定はページ末尾のJavaScriptで自動適用されます。
+			Open Accessの場合は class="paper" を class="paper open-access" に変更してください。
+			<div class="publication-links">
+				<a class="paper" href="PAPER_URL">Paper</a>
+				<a class="arxiv" href="ARXIV_URL">arXiv</a>
+				<a class="youtube" href="YOUTUBE_URL">YouTube</a>
+			</div>
+		-->
 		<h3>Journals</h3>
 			<ol>
 				<li>
 					Zewen He, <a href="#">Taiki Ishigaki</a>, and Ko Yamamoto,  
-					<a href="https://doi.org/10.1016/j.robot.2026.105515">
-						"Modeling and control of a rigid-soft hybrid-link humanoid robot"
-					</a> 
-					, Robotics and Autonomous Systems, 2026
+					<span class="publication-title">"Modeling and Control of a Rigid-Soft Hybrid-Link Humanoid Robot"</span>
+					, Robotics and Autonomous Systems, May, 2026
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1016/j.robot.2026.105515">Paper</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 吉田英一,  
-					<a href="https://www.rsj.or.jp/pub/jrsj/advpub/260219-04.html">
-						"広がる運動計算論 ―剛体リンクから連続柔軟ロッドの高階微分運動学―"
-					</a> 
-					, 日本ロボット学会誌, 2026, (Open Access)
+					<span class="publication-title">"広がる運動計算論 ―剛体リンクから連続柔軟ロッドの高階微分運動学―"</span>
+					, 日本ロボット学会誌, 2026
+					<div class="publication-links">
+						<a class="paper open-access" href="https://www.rsj.or.jp/pub/jrsj/advpub/260219-04.html">Paper</a>
+					</div>
 				</li>
 				<li>
 					Sunghee Kim, Yuta Shimane, <a href="#">Taiki Ishigaki</a>, and Ko Yamamoto,  
-					<a href="https://doi.org/10.1080/01691864.2025.2611426">
-						"Dynamics computation of soft-rigid hybrid-link system and its application to motion analysis of an athlete wearing sport prosthesis"
-					</a> 
-					, Advanced Robotics, Volume 40, Issue 4, pp. 197-211, 2026
+					<span class="publication-title">"Dynamics Computation of Soft-Rigid Hybrid-Link System and Its Application to Motion Analysis of an Athlete Wearing Sport Prosthesis"</span>
+					, Advanced Robotics, Volume 40, Issue 4, pp. 197-211, January, 2026
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1080/01691864.2025.2611426">Paper</a>
+						<a class="arxiv" href="https://doi.org/10.48550/arXiv.2605.13192">arXiv</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">Taiki Ishigaki</a>, Ko Ayusawa, and Ko Yamamoto,  
-					<a href="https://doi.org/10.1109/LRA.2025.3548497">
-						"Unified Framework of Gradient Computation for Hybrid-Link System and Its Dynamical Simulation by Implicit Method"
-					</a> 
-					, IEEE Robotics and Automation Letters, Volume 10, Issue 5, pp. 4188-4195, 2025 (Open Access)
+					<span class="publication-title">"Unified Framework of Gradient Computation for Hybrid-Link System and Its Dynamical Simulation by Implicit Method"</span>
+					, IEEE Robotics and Automation Letters, Volume 10, Issue 5, pp. 4188-4195, May, 2025
+					<div class="publication-links">
+						<a class="paper open-access" href="https://doi.org/10.1109/LRA.2025.3548497">Paper</a>
+					</div>
 				</li>
 				<li>
 					Yuta Shimane, <a href="#">Taiki Ishigaki</a>, Sunghee Kim and Ko Yamamoto,  
-					<a href="https://doi.org/10.1080/01691864.2024.2407118">
-						"Viscoelasticity estimation of sports prosthesis by energy-minimizing inverse kinematics and its validation by forward dynamics"
-					</a> 
-					, Advanced Robotics, Volume 38, Issue 21, pp. 1515-1527, 2024
+					<span class="publication-title">"Viscoelasticity Estimation of Sports Prosthesis by Energy-Minimizing Inverse Kinematics and Its Validation by Forward Dynamics"</span>
+					, Advanced Robotics, Volume 38, Issue 21, pp. 1515-1527, October, 2024
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1080/01691864.2024.2407118">Paper</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">Taiki Ishigaki</a>, Ko Ayusawa, and Ko Yamamoto,  
-					<a href="https://doi.org/10.1109/LRA.2024.3397530">
-						"Comprehensive Gradient Computation Framework of PCS Model for Soft Robot Simulation
-						"
-					</a> 
-					, IEEE Robotics and Automation Letters, Volume 9, Issue 6, pp. 5990-5997, 2024 (Open Access)
+					<span class="publication-title">"Comprehensive Gradient Computation Framework of PCS Model for Soft Robot Simulation"</span>
+					, IEEE Robotics and Automation Letters, Volume 9, Issue 6, pp. 5990-5997, June, 2024
+					<div class="publication-links">
+						<a class="paper open-access" href="https://doi.org/10.1109/LRA.2024.3397530">Paper</a>
+					</div>
 				</li>
 				<li>
 					Ko Yamamoto, <a href="#">Taiki Ishigaki</a>, and Yoshihiko Nakamura, 
-					<a href="https://doi.org/10.1109/TRO.2021.3119934">
-						"Humanoid Motion Control by Compliance Optimization Explicitly Considering its Positive Definiteness"
-					</a> 
-					, IEEE Transactions on Robotics, Volume 38, Issue 3, pp. 1973-1989, 2022 (Open Access)
+					<span class="publication-title">"Humanoid Motion Control by Compliance Optimization Explicitly Considering Its Positive Definiteness"</span>
+					, IEEE Transactions on Robotics, Volume 38, Issue 3, pp. 1973-1989, November, 2022
+					<div class="publication-links">
+						<a class="paper open-access" href="https://doi.org/10.1109/TRO.2021.3119934">Paper</a>
+					</div>
 				</li>
 				<li>
 					Kazuya Murotani, Ko Yamamoto,  <a href="#">Taiki Ishigaki</a>, and Yoshihiko Nakamura,
-					<a href="https://doi.org/10.1080/01691864.2020.1835533">
-						"Comparative study of force control methods for bipedal walking using a force-sensitive hydraulic humanoid"
-					</a> 
-					, Advanced Robotics, Volume 34, Issue 21-22, pp.1455-1471, 2020
+					<span class="publication-title">"Comparative Study of Force Control Methods for Bipedal Walking Using a Force-Sensitive Hydraulic Humanoid"</span>
+					, Advanced Robotics, Volume 34, Issue 21-22, pp.1455-1471, October, 2020
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1080/01691864.2020.1835533">Paper</a>
+					</div>
 				</li>
 			</ol>
 			<h3>International Conference Proceedings</h3>
 			<ol>
-        		<li>
-					<a href="#">Taiki Ishigaki</a>,Teresa Vidal-Calleja. Ko Ayusawa, and Eiichi Yoshida,
-					<a href="">
-						"Implicit Null-space Manifold Generation for Redundant Robotic Systems"
-					</a> 
-					, Robotics: Science and Systems 2026 (Accepted)
+				<li>
+					Taiga Ikeshima, Teresa Vidal-Calleja, Lan Wu, Sheila Sutjipto, Francisco J Naranjo-Campos, Taisuke Kobayashi, <a href="#">Taiki Ishigaki</a>, and Eiichi Yoshida,
+					<span class="publication-title">"Distance Field Driven Reinforcement Learning for Reactive and Robust Collision Avoidance"</span>
+					, Proceedings of 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026), 27 September - 1 October, 2026 (採択済).
 				</li>
-        		<li>
+				<li>
+					<a href="#">Taiki Ishigaki</a>, Teresa Vidal-Calleja, Ko Ayusawa, and Eiichi Yoshida,
+					<span class="publication-title">"Implicit Null-Space Manifold Generation for Redundant Robotic Systems"</span>
+					, Proceedings of Robotics: Science and Systems, Sydney, Australia, 13-17 July, 2026.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.15607/RSS.2026.XXII.187">Paper</a>
+					</div>
+				</li>
+				<li>
 					Tomoya Sasaki, <a href="#">Taiki Ishigaki</a>, Diego Roulle, and Eiichi Yoshida,
-					<a href="https://dl.acm.org/doi/10.1145/3776734.3794585">
-						"RelOrb: Relative Orbiting for Teleoperation"
-					</a> 
-					, 2026 ACM/IEEE International Conference on Human-Robot Interaction (HRI 2026) Interactivity (Videos/Demos), Edinburgh, United Kingdom, March, 2026.
+					<span class="publication-title">"RelOrb: Relative Orbiting for Teleoperation"</span>
+					, 2026 ACM/IEEE International Conference on Human-Robot Interaction (HRI 2026) Interactivity (Videos/Demos), Edinburgh, United Kingdom, 16-19 March, 2026.
+					<div class="publication-links">
+						<a class="paper" href="https://dl.acm.org/doi/10.1145/3776734.3794585">Paper</a>
+					</div>
 				</li>
-        		<li>
+				<li>
 					Shotaro Itahara, Takuzumi Nishio, <a href="#">Taiki Ishigaki</a>,  Junichiro Sugihara, Moju Zhao, and Ko Yamamoto,
-					<a href="https://doi.org/10.1109/ICRA55743.2025.11128294">
-						"Modeling and Control of Aerial Robot SERPENT: A Soft Structure Incorporated Multirotor Aerial Robot Capable of In-Flight Flexible Deformation"
-					</a> 
-					, Proceedings of IEEE International Conference on Robotics and Automation, pp. 6364-6370, 2025.
+					<span class="publication-title">"Modeling and Control of Aerial Robot SERPENT: A Soft Structure Incorporated Multirotor Aerial Robot Capable of In-Flight Flexible Deformation"</span>
+					, Proceedings of IEEE International Conference on Robotics and Automation, pp. 6364-6370, 19-23 May, 2025.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1109/ICRA55743.2025.11128294">Paper</a>
+					</div>
 				</li>
-        		<li>
+				<li>
 					Zewen He, <a href="#">Taiki Ishigaki</a>, and Ko Yamamoto,
-					<a href="https://doi.org/10.1109/IROS58592.2024.10801838">
-						"Compliance Optimization Control for Rigid-Soft Hybrid System and its Application in Humanoid Robot Motion Control"
-					</a> 
-					, Proceedings of 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024), pp. 11218-11224, 2024.
+					<span class="publication-title">"Compliance Optimization Control for Rigid-Soft Hybrid System and Its Application in Humanoid Robot Motion Control"</span>
+					, Proceedings of 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024), pp. 11218-11224, 14-18 October, 2024.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1109/IROS58592.2024.10801838">Paper</a>
+					</div>
 				</li>
-        		<li>
+				<li>
 					Sunghee Kim, <a href="#">Taiki Ishigaki</a>, Yuta Shimane, Yosuke Ikegami, and Ko Yamamoto,
-					<a href="https://doi.org/10.1109/Humanoids53995.2022.10000195">
-						"Inverse Kinematics of Hybrid Multi-link System and its Application to Motion Capture for Athlete Wearing Sports Prosthesis"
-					</a> 
-					, Proceedings of 2022 IEEE-RAS International Conference on Humanoid Robots (Humanoids 2022), pp. 837-842, 2022.
+					<span class="publication-title">"Inverse Kinematics of Hybrid Multi-Link System and Its Application to Motion Capture for Athlete Wearing Sports Prosthesis"</span>
+					, Proceedings of 2022 IEEE-RAS International Conference on Humanoid Robots (Humanoids 2022), pp. 837-842, 28-30 November, 2022.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1109/Humanoids53995.2022.10000195">Paper</a>
+					</div>
 				</li>
 				<li>
 					Yuta Shimane, <a href="#">Taiki Ishigaki</a>, Sunghee Kim, Yosuke Ikegami, and Ko Yamamoto, 
-					<a href="https://doi.org/10.1109/IROS47612.2022.9981207">
-						"Application of Piece-wise Constant Strain Model to Flexible Deformation Calculation of Sports Prosthesis and Stiffness Estimation"
-					</a> 
-					, Proceedings of 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022), pp. 6547-6553, 2022.
+					<span class="publication-title">"Application of Piece-Wise Constant Strain Model to Flexible Deformation Calculation of Sports Prosthesis and Stiffness Estimation"</span>
+					, Proceedings of 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022), pp. 6547-6553, 23-27 October, 2022.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1109/IROS47612.2022.9981207">Paper</a>
+					</div>
 				</li>
-        		<li>
+				<li>
 					Ko Yamamoto, Naoki Kobayashi, <a href="#">Taiki Ishigaki</a>, and Yuichi Sakemi, 
-					<a href="https://doi.org/10.1109/IROS47612.2022.9981804">
-						"Integration of Variable-height and Hopping Strategies for Humanoid Push Recovery"
-					</a> 
-					, Proceedings of 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022), pp. 12979-12985, 2022.
+					<span class="publication-title">"Integration of Variable-Height and Hopping Strategies for Humanoid Push Recovery"</span>
+					, Proceedings of 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022), pp. 12979-12985, 23-27 October, 2022.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1109/IROS47612.2022.9981804">Paper</a>
+					</div>
 				</li>
 				<li>
 					<a href="#">Taiki Ishigaki</a>, and Ko Yamamoto,
-					<a href="https://doi.org/10.1109/IROS51168.2021.9636733">
-						"Dynamics Computation of a Hybrid Multi-link Humanoid Robot Integrating Rigid and Soft Bodies"
-					</a> 
-					, Proceedings of IEEE International Conference on Intelligent Robots and Systems (IROS 2021), pp. 2793-2798, 2021.
+					<span class="publication-title">"Dynamics Computation of a Hybrid Multi-Link Humanoid Robot Integrating Rigid and Soft Bodies"</span>
+					, Proceedings of IEEE International Conference on Intelligent Robots and Systems (IROS 2021), pp. 2793-2798, 27 September-1 October, 2021.
+					<div class="publication-links">
+						<a class="paper" href="https://doi.org/10.1109/IROS51168.2021.9636733">Paper</a>
+					</div>
 				</li>
 			</ol>
 		<h3>Domestic Conference Proceedings</h3>
@@ -314,27 +394,27 @@
 		<ol>
 			<li>
 				<a href="#">石垣泰暉</a>, 鮎澤光, 吉田英一,
-				"高階時間微分を考慮した多リンク系の順・逆運動最適化"
+				<span class="publication-title">"高階時間微分を考慮した多リンク系の順・逆運動最適化"</span>
 				, 第31回ロボティクスシンポジア, 2026.
 			</li>
 			<li>
 				工藤大和, <a href="#">石垣泰暉</a>, 鮎澤光, 山本江,
-				"相似変換群とポアンカレ方程式による膨張・収縮するソフトロボットの動力学"
+				<span class="publication-title">"相似変換群とポアンカレ方程式による膨張・収縮するソフトロボットの動力学"</span>
 				, 第31回ロボティクスシンポジア, 2026.
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 鮎澤光, 山本江,
-				"包括的力学勾配計算と陰的積分によるPCSモデルの実時間高速シミュレーション"
+				<span class="publication-title">"包括的力学勾配計算と陰的積分によるPCSモデルの実時間高速シミュレーション"</span>
 				, 第29回ロボティクスシンポジア, 2024.
 			</li>
 			<li>
 				山本江, 小林直樹, <a href="#">石垣泰暉</a>, 
-				"ヒューマノイドの転倒回避における跳躍を用いたシームレスな制御戦略変容"
+				<span class="publication-title">"ヒューマノイドの転倒回避における跳躍を用いたシームレスな制御戦略変容"</span>
 				, 第27回ロボティクスシンポジア, 2022.
 			</li>
 			<li>
 				石橋亨祐, 阿佐美理, <a href="#">石垣泰暉</a>, 駒形光夫, 山本江, 
-				"重量野菜ハンドリングのための油圧駆動型ソフトハンド"
+				<span class="publication-title">"重量野菜ハンドリングのための油圧駆動型ソフトハンド"</span>
 				, 第27回ロボティクスシンポジア, 2022.
 			</li>
 		</ol>
@@ -342,103 +422,115 @@
 		<ol>
 			<li>
 				<a href="#">石垣泰暉</a>, Teresa Vidal-Calleja, 鮎澤光, 吉田英一, 
-				"相冗長自由度ロボットのシステムにおける暗黙的な零空間多様体の生成"
+				<span class="publication-title">"相冗長自由度ロボットのシステムにおける暗黙的な零空間多様体の生成"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2026
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 佐々木智也, 吉田英一,
-				"健康モニタリングロボット用心拍・ピンチ力マルチモーダルセンシングシステムの設計"
+				<span class="publication-title">"健康モニタリングロボット用心拍・ピンチ力マルチモーダルセンシングシステムの設計"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2026
 			</li>
 			<li>
 				池島大雅, Teresa Vidal-Calleja, Lan Wu, Sheila Sutjipto, Francisco J Naranjo-Campos, 小林泰介, <a href="#">石垣泰暉</a>, 吉田英一, 
-				"距離場環境表現を用いた強化学習に基づくロバストな実時間障害物回避"
+				<span class="publication-title">"距離場環境表現を用いた強化学習に基づくロバストな実時間障害物回避"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2026
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 吉田英一 
-				"広がる運動計算論 ー剛体リンクから連続柔軟ロッドの高階微分運動学ー"
+				<span class="publication-title">"広がる運動計算論 ー剛体リンクから連続柔軟ロッドの高階微分運動学ー"</span>
 				, 第41回日本ロボット学会学術講演会, 3A1-02, 2025.
 			</li>
 			<li>
 				工藤大和, <a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 
-				"相似変換リー群による膨張収縮変形を含むソフトロボットシミュレーション"
+				<span class="publication-title">"相似変換リー群による膨張収縮変形を含むソフトロボットシミュレーション"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2025
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 
-				"等価角軸表現によるハイブリッド浮遊リンク系の陰的積分を用いた順動力学計算"
+				<span class="publication-title">"等価角軸表現によるハイブリッド浮遊リンク系の陰的積分を用いた順動力学計算"</span>
 				, 第41回日本ロボット学会学術講演会, 3I3-06, 2024.
 			</li>
 			<li>
 				嶋根裕太, <a href="#">石垣泰暉</a>, 山本江, 
-				"競技用義足の粘弾性推定と順動力学シミュレーションによる評価"
+				<span class="publication-title">"競技用義足の粘弾性推定と順動力学シミュレーションによる評価"</span>
 				, 第41回日本ロボット学会学術講演会, 2A1-06, 2024.
 			</li>
 			<li>
 				何 澤文, <a href="#">石垣泰暉</a>, 山本江, 
-				"身体に受動的弾性要素を含むヒューマノイドのハイブリッドリンク系によるモデル化とそのコンプライアンス最適化制御"
+				<span class="publication-title">"身体に受動的弾性要素を含むヒューマノイドのハイブリッドリンク系によるモデル化とそのコンプライアンス最適化制御"</span>
 				, 第41回日本ロボット学会学術講演会, 3I3-07, 2024.
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 
-				"包括的力学勾配計算と陰的積分による柔剛体を統合したハイブリッドリンク系の高速な順動力学シミュレーション"
+				<span class="publication-title">"包括的力学勾配計算と陰的積分による柔剛体を統合したハイブリッドリンク系の高速な順動力学シミュレーション"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 1A1-D09, 2024.
 			</li>
 			<li>
 				板原正太郎, 西尾卓純, <a href="#">石垣泰暉</a>, 杉原淳一朗, 趙漠居, 山本江, 
-				"マルチロータ型ソフトロボットの飛行および変形動作の制御"
+				<span class="publication-title">"マルチロータ型ソフトロボットの飛行および変形動作の制御"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 1A1-A06, 2024.
 			</li>
 			<li>
 				嶋根裕太, <a href="#">石垣泰暉</a>, 金星喜, 山本江, 
-				"競技用義足のPCSモデルに基づく柔軟変形の計算とその粘性推定"
+				<span class="publication-title">"競技用義足のPCSモデルに基づく柔軟変形の計算とその粘性推定"</span>
 				, 第41回日本ロボット学会学術講演会, 3I1-04, 2023.
 			</li>
 			<li>
 				平岡憲昇, 嶋根裕太, <a href="#">石垣泰暉</a>, 金星喜, 山本江, 
-				"ハイブリッドリンク系に基づく競技用義足のコンプライアンス楕円体の解析"
+				<span class="publication-title">"ハイブリッドリンク系に基づく競技用義足のコンプライアンス楕円体の解析"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 1A1-E224, 2023.
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 山本江, 
-					"柔剛体を統合したハイブリッドリンク系によるヒューマノイドの動力学計算"
+					<span class="publication-title">"柔剛体を統合したハイブリッドリンク系によるヒューマノイドの動力学計算"</span>
 				, 第40回日本ロボット学会学術講演会, 2E2-03, 2022.
 			</li>
 			<li>
 				嶋根裕太, <a href="#">石垣泰暉</a>, 金星喜, 池上洋介, 山本江, 
-				"Piece-wise Constant Strainモデルに基づく 競技用義足の動力学計算と評価"
+				<span class="publication-title">"Piece-Wise Constant Strainモデルに基づく 競技用義足の動力学計算と評価"</span>
 				, 第40回日本ロボット学会学術講演会, 3C2-02, 2022.
 			</li>
 			<li>
 				嶋根裕太, <a href="#">石垣泰暉</a>, 金星喜, 池上洋介, 山本江, 
-				"Piece-wise Constant Strain モデルに基づく 競技用義足の柔軟変形の計算と剛性パラメータの推定"
+				<span class="publication-title">"Piece-Wise Constant Strain モデルに基づく 競技用義足の柔軟変形の計算と剛性パラメータの推定"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2A2-H04, 2022.
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 山本江, 
-				"リジット/ソフトボディを統合したハイブリッドリンク系の力学計算と制御"
+				<span class="publication-title">"リジット/ソフトボディを統合したハイブリッドリンク系の力学計算と制御"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2021.
 			</li>
 			<li>
 				<a href="#">石垣泰暉</a>, 山本江, 中村仁彦, 
-				"リーマン多様体上のコンプライアンス分配最適化によるロボットの制御"
+				<span class="publication-title">"リーマン多様体上のコンプライアンス分配最適化によるロボットの制御"</span>
 				, 日本機械学会ロボティクス・メカトロニクス講演会, 2020.
 			</li>
 			<li>
 				山本江, <a href="#">石垣泰暉</a>, 中村仁彦,
-				"ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証" 
+				<span class="publication-title">"ヒューマノイドの動力学を考慮した全身コンプライアンス最適化によるバランス制御の実験検証"</span>
 				, 第37回ロボット学会学術講演会前刷集, 3L2-05, 東京, 日本, 2019.9.4-6.
 			</li>
 		</ol>
 		<h3>Awards</h3>
 		<ol>
 			<li>
+				日本ロボット学会第7回優秀研究・技術賞,
+				<a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 吉田英一,
+				<span class="publication-title">"広がる運動計算論 剛体リンクから連続柔軟ロッドの高階微分運動学"</span>,
+				第43回日本ロボット学会学術講演会, 2025.
+			</li>
+			<li>
+				第16回ロボティクスシンポジア研究奨励賞,
+				<a href="#">石垣泰暉</a>,
+				<span class="publication-title">"高階時間微分を考慮した多リンク系の順・逆運動最適化"</span>,
+				第31回ロボティクスシンポジア, 3A3, 2026.
+			</li>
+			<li>
 				<a href="https://www.robotics-symposia.org/31st/files/RS31_award.pdf">
 					第31回ロボティクスシンポジア賞 優秀賞
 				</a>, 
 				<a href="#">石垣泰暉</a>, 鮎澤光, 吉田英一, 
-				"高階時間微分を考慮した多リンク系の順・逆運動最適化",
+				<span class="publication-title">"高階時間微分を考慮した多リンク系の順・逆運動最適化"</span>,
 				第31回ロボティクスシンポジア, 3A3, 2026.
 			</li>
 			<li>
@@ -446,7 +538,7 @@
 					ROBOMECH表彰（学術研究分野）
 				</a>,
 				<a href="#">石垣泰暉</a>, 鮎澤光, 山本江, 
-				"包括的力学勾配計算と陰的積分による柔剛体を統合したハイブリッドリンク系の高速な順動力学シミュレーション",
+				<span class="publication-title">"包括的力学勾配計算と陰的積分による柔剛体を統合したハイブリッドリンク系の高速な順動力学シミュレーション"</span>,
 				日本機械学会ロボティクス・メカトロニクス講演会, 1A1-D09, 2024.
 			</li>
 			<li>
@@ -454,7 +546,7 @@
 					日本ロボット学会第5回優秀研究・技術賞
 				</a>,
 				嶋根裕太, <a href="#">石垣泰暉</a>, 金星喜, 山本江, 
-				"競技用義足のPCSモデルに基づく柔軟変形の計算とその粘性推定",
+				<span class="publication-title">"競技用義足のPCSモデルに基づく柔軟変形の計算とその粘性推定"</span>,
 				第41回日本ロボット学会学術講演会, 3I1-04, 2023.
 			</li>
 		</ol>
@@ -463,7 +555,7 @@
 		<ol>	
 			<li>
 				Tomoya Sasaki, <a href="#">Taiki Ishigaki</a>, and Takahiro Hoshi, Diego Roulle, Eiichi Yoshida,
-				"Relative Orbiting for Teleoperation using Virtual Reality",
+				<span class="publication-title">"Relative Orbiting for Teleoperation Using Virtual Reality"</span>,
 				<a href="https://arcworkshop2025.wordpress.com/">
 				ARC: Assistive Robots for Caregiving through Shared Autonomy and Human-Aware Interaction (Workshop) 
 				</a>
@@ -474,7 +566,7 @@
 		<ol>
 			<li>
 				<a href="#">石垣泰暉</a>, 
-				"柔軟構造の変形・力・運動をめぐるロボット計算論",
+				<span class="publication-title">"柔軟構造の変形・力・運動をめぐるロボット計算論"</span>,
 				<a href="https://softrobot.jp/events/2026/06241237442686">
 					『 “いいかげん”を科学して未来を創るソフトロボット学7』
 				</a> 
@@ -482,8 +574,7 @@
 			</li>
 			<li>
 				<a href="#">Taiki Ishigaki</a>, 
-				"Hybrid-link system integrating rigid- and soft-bodies 
-				for humanoid control and human motion analysis",
+				<span class="publication-title">"Hybrid-Link System Integrating Rigid- and Soft-Bodies for Humanoid Control and Human Motion Analysis"</span>,
 				<a href="https://ytazz.github.io/vnoid/humanoids2022tutorial.html">
 					Challenge-Driven Learning of Humanoid Robot Control in Virtual Environments
 				</a> 
@@ -494,14 +585,14 @@
 		<ol>
 			<li>
 				曽我公平, 桧崎太輔, 梅澤雅和, 上村真生, 佐々木智也, <a href="#">石垣泰暉</a>, 鮎澤光, 吉田英一,
-				"ロボットは見ている、ロボットに見せられる、見せたいバイオメディカルイメージ",
+				<span class="publication-title">"ロボットは見ている、ロボットに見せられる、見せたいバイオメディカルイメージ"</span>,
 				第17回バイオメディカルインターフェース・ワークショップ, 久米島イーフ情報プラザ （沖縄・久米島）, 2026年2月28日～3月2日
 			</li>
 		</ol>
 		<h3>Books</h3>
 		<ol>
 			<li>
-				"ロボット運動計算論",
+				<span class="publication-title">"ロボット運動計算論"</span>,
 				山本江, 鮎澤光, <a href="#">石垣泰暉</a>,
 				コロナ社, 2026.4.
 			</li>
@@ -572,5 +663,12 @@
 			 ISHIGAKI Taiki All Rights Reserved.
 		</p>
 	</footer>
+	<script>
+		// 論文用リンクは、新しく追加したものも一括で別タブに開く。
+		document.querySelectorAll('.publication-links a[href]').forEach(link => {
+			link.target = '_blank';
+			link.relList.add('noopener', 'noreferrer');
+		});
+	</script>
 </body>
 </html>
